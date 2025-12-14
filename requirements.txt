@@ -9,3 +9,4 @@ numpy
 plotly
 langchain-core
 langchain
+reportlab

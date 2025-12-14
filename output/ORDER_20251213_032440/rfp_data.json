@@ -1,0 +1,82 @@
+{
+  "client_name": "BigBasket",
+  "location": "Hosur Road Hub, Bangalore",
+  "order_date": "20-Dec-2025",
+  "deadline": "24-Dec-2025",
+  "line_items": [
+    {
+      "id": "1",
+      "description": "1000 units of Sunsilk Black Shine (180ml)",
+      "item_name": "Sunsilk Black Shine Shampoo",
+      "specifications": "180ml",
+      "quantity": 1000,
+      "unit": "units",
+      "category_hint": "Hair Care"
+    },
+    {
+      "id": "2",
+      "description": "500 units of Sunsilk Black Shine (Large Pack 650ml)",
+      "item_name": "Sunsilk Black Shine Shampoo",
+      "specifications": "650ml",
+      "quantity": 500,
+      "unit": "units",
+      "category_hint": "Hair Care"
+    },
+    {
+      "id": "3",
+      "description": "200 boxes of Pond's Bright Beauty Face Wash (100g)",
+      "item_name": "Pond's Bright Beauty Face Wash",
+      "specifications": "100g",
+      "quantity": 200,
+      "unit": "boxes",
+      "category_hint": "Skin Care"
+    },
+    {
+      "id": "4",
+      "description": "150 units of Vaseline Body Lotion",
+      "item_name": "Vaseline Body Lotion",
+      "specifications": "400ml preferred",
+      "quantity": 150,
+      "unit": "units",
+      "category_hint": "Skin Care"
+    },
+    {
+      "id": "5",
+      "description": "300 tubes of Lakme CC Cream (Beige shade mandatory)",
+      "item_name": "Lakme CC Cream",
+      "specifications": "Beige shade",
+      "quantity": 300,
+      "unit": "tubes",
+      "category_hint": "Skin Care"
+    },
+    {
+      "id": "6",
+      "description": "500 bottles of Vim Liquid Gel (750ml)",
+      "item_name": "Vim Liquid Gel",
+      "specifications": "750ml",
+      "quantity": 500,
+      "unit": "bottles",
+      "category_hint": "Home Care"
+    },
+    {
+      "id": "7",
+      "description": "200 bags of Surf Excel Matic Top Load",
+      "item_name": "Surf Excel Matic Top Load",
+      "specifications": "Top Load",
+      "quantity": 200,
+      "unit": "bags",
+      "category_hint": "Home Care"
+    },
+    {
+      "id": "8",
+      "description": "100 cans of Domex Floor Cleaner",
+      "item_name": "Domex Floor Cleaner",
+      "specifications": "",
+      "quantity": 100,
+      "unit": "cans",
+      "category_hint": "Home Care"
+    }
+  ],
+  "is_relevant": true,
+  "priority_score": 85
+}

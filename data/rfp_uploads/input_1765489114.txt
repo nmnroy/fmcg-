@@ -1,0 +1,9 @@
+Order Request
+Date: 12-Dec-2025
+Client: QuickMart Convenience Store
+
+Please supply:
+1. 50 units of Sunsilk Black Shine Shampoo (180ml).
+2. 30 bottles of Vim Liquid Gel (750ml).
+
+Urgent delivery required.

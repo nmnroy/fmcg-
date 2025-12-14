@@ -1,0 +1,26 @@
+sku_id,name,category,specs,base_cost,unit
+HUL_SURF_001,Surf Excel Matic Top Load 2kg,Detergent,"weight:2kg,type:top_load_powder,brand:Surf Excel",480,pack
+HUL_SURF_002,Surf Excel Matic Front Load 2kg,Detergent,"weight:2kg,type:front_load_powder,brand:Surf Excel",500,pack
+HUL_SURF_003,Surf Excel Easy Wash 1kg,Detergent,"weight:1kg,type:hand_wash_powder,brand:Surf Excel",110,pack
+HUL_VIM_001,Vim Dishwash Gel 750ml,Dishwashing,"volume:750ml,variant:lemon,brand:Vim",155,bottle
+HUL_VIM_002,Vim Dishwash Bar 500g,Dishwashing,"weight:500g,variant:lemon,brand:Vim",40,bar
+HUL_SUN_001,Sunsilk Black Shine Shampoo 180ml,Shampoo,"volume:180ml,variant:black_shine,brand:Sunsilk",130,bottle
+HUL_SUN_002,Sunsilk Pink 180ml,Shampoo,"volume:180ml,variant:thick_long,brand:Sunsilk",130,bottle
+HUL_DOVE_001,Dove Hair Fall Rescue Shampoo 340ml,Shampoo,"volume:340ml,variant:hair_fall,brand:Dove",250,bottle
+HUL_DOVE_002,Dove Intense Repair Shampoo 340ml,Shampoo,"volume:340ml,variant:intense_repair,brand:Dove",250,bottle
+HUL_LUX_001,Lux International Creamy Perfection 125g,Soap,"weight:125g,variant:soaps,brand:Lux",35,bar
+HUL_LIFE_001,Lifebuoy Total 10 Soap 125g,Soap,"weight:125g,variant:germ_protection,brand:Lifebuoy",32,bar
+HUL_PEARS_001,Pears Pure & Gentle Soap 125g,Soap,"weight:125g,variant:glycerin,brand:Pears",45,bar
+HUL_VAS_001,Vaseline Intensive Care Cocoa Glow 400ml,Lotion,"volume:400ml,variant:cocoa_glow,brand:Vaseline",360,bottle
+HUL_VAS_002,Vaseline Deep Moisture 400ml,Lotion,"volume:400ml,variant:deep_moisture,brand:Vaseline",310,bottle
+HUL_BRU_001,Bru Instant Coffee 100g,Beverage,"weight:100g,type:instant_coffee,brand:Bru",290,pack
+HUL_TAJ_001,Taj Mahal Tea 500g,Beverage,"weight:500g,type:tea_dust,brand:Taj Mahal",430,pack
+HUL_RED_001,Red Label Tea 1kg,Beverage,"weight:1kg,type:tea_dust,brand:Red Label",550,pack
+HUL_KIS_001,Kissan Mixed Fruit Jam 700g,Food,"weight:700g,type:jam,brand:Kissan",250,bottle
+HUL_KIS_002,Kissan Fresh Tomato Ketchup 1kg,Food,"weight:1kg,type:ketchup,brand:Kissan",160,bottle
+ITC_ASH_001,Aashirvaad Atta 10kg,Food,"weight:10kg,type:wheat_flour,brand:Aashirvaad",480,bag
+ITC_SUN_001,Sunfeast Dark Fantasy Choco Fills 300g,Food,"weight:300g,type:biscuits,brand:Sunfeast",120,box
+ITC_YIP_001,YiPPee! Magic Masala Noodles 240g,Food,"weight:240g,type:noodles,brand:YiPPee",48,pack
+PAT_DANT_001,Patanjali Dant Kanti 200g,Toothpaste,"weight:200g,type:herbal,brand:Patanjali",95,tube
+COL_MAX_001,Colgate MaxFresh Red 150g,Toothpaste,"weight:150g,type:gel,brand:Colgate",110,tube
+NES_MAG_001,Maggi 2-Minute Noodles 420g,Food,"weight:420g,type:noodles,brand:Maggi",85,pack

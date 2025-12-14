@@ -1,0 +1,84 @@
+{
+  "matches": [
+    {
+      "line_item_id": "1",
+      "original_desc": "1000 units of Sunsilk Black Shine (180ml) - [Code HC-001]",
+      "matched_sku_code": null,
+      "matched_sku_name": "",
+      "matched_sku_details": "",
+      "match_confidence_score": 0.0,
+      "reason": "No candidates provided for matching.",
+      "is_ambiguous": false
+    },
+    {
+      "line_item_id": "2",
+      "original_desc": "500 units of Sunsilk Black Shine (Large Pack 650ml)",
+      "matched_sku_code": null,
+      "matched_sku_name": "",
+      "matched_sku_details": "",
+      "match_confidence_score": 0.0,
+      "reason": "No candidates provided for matching.",
+      "is_ambiguous": false
+    },
+    {
+      "line_item_id": "3",
+      "original_desc": "200 boxes of Pond's Bright Beauty Face Wash (100g).",
+      "matched_sku_code": null,
+      "matched_sku_name": "",
+      "matched_sku_details": "",
+      "match_confidence_score": 0.0,
+      "reason": "No candidates provided for matching.",
+      "is_ambiguous": false
+    },
+    {
+      "line_item_id": "4",
+      "original_desc": "150 units of Vaseline Body Lotion. (Please specify if 200ml or 400ml is available, we prefer 400ml).",
+      "matched_sku_code": null,
+      "matched_sku_name": "",
+      "matched_sku_details": "",
+      "match_confidence_score": 0.0,
+      "reason": "No candidates provided for matching.",
+      "is_ambiguous": false
+    },
+    {
+      "line_item_id": "5",
+      "original_desc": "300 tubes of Lakme CC Cream (Beige shade mandatory).",
+      "matched_sku_code": null,
+      "matched_sku_name": "",
+      "matched_sku_details": "",
+      "match_confidence_score": 0.0,
+      "reason": "No candidates provided for matching.",
+      "is_ambiguous": false
+    },
+    {
+      "line_item_id": "6",
+      "original_desc": "500 bottles of Vim Liquid Gel (750ml).",
+      "matched_sku_code": null,
+      "matched_sku_name": "",
+      "matched_sku_details": "",
+      "match_confidence_score": 0.0,
+      "reason": "No matching candidates provided.",
+      "is_ambiguous": false
+    },
+    {
+      "line_item_id": "7",
+      "original_desc": "200 bags of Surf Excel Matic Top Load.",
+      "matched_sku_code": null,
+      "matched_sku_name": "",
+      "matched_sku_details": "",
+      "match_confidence_score": 0.0,
+      "reason": "No matching candidates provided.",
+      "is_ambiguous": false
+    },
+    {
+      "line_item_id": "8",
+      "original_desc": "100 cans of Domex Floor Cleaner.",
+      "matched_sku_code": null,
+      "matched_sku_name": "",
+      "matched_sku_details": "",
+      "match_confidence_score": 0.0,
+      "reason": "No matching candidates provided.",
+      "is_ambiguous": false
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "rfp_id": "AP-RFP-20241105-001",
+  "metadata": {
+    "client_name": "Metro Heights Apartment Complex",
+    "project_name": "Complete Interior and Exterior Painting",
+    "project_type": "Residential",
+    "location": "Mumbai, Maharashtra",
+    "submission_deadline": "15th January 2025",
+    "estimated_value": "Rs. 5,00,000 - Rs. 7,00,000",
+    "contact_info": "Mr. Rajesh Kumar - 9876543210",
+    "project_area_sqft": 15800,
+    "total_paint_requirement": 152
+  },
+  "requirements": {
+    "summary": "The RFP is for complete interior and exterior painting of the Metro Heights Apartment Complex. It requires premium washable paint for interior walls, matte finish for ceilings, antibacterial paint for children's areas, and waterproof paint for bathrooms. Exterior walls need weather-resistant paint with 7+ years durability. All paints must be Asian Paints brand, specifically mentioning Royale Aspira, Apex Ultima, HealthShield, and SmartCare ranges. The project has an estimated budget of Rs. 5-7 lakhs and a submission deadline of January 15, 2025.",
+    "technical_specs": [
+      "Premium washable paint for interior walls",
+      "Matte finish for ceilings",
+      "Antibacterial/health-focused paint for children's play area",
+      "Waterproof paint for bathrooms",
+      "Weather-resistant paint for exterior walls",
+      "Premium finish with 7+ years of durability for exterior",
+      "Must withstand Mumbai monsoon conditions",
+      "Warranty details required",
+      "Application cost per liter required",
+      "Number of coats required",
+      "Surface preparation requirements"
+    ],
+    "quality_standards": [
+      "Premium range",
+      "7+ years of durability (exterior)",
+      "Must withstand Mumbai monsoon conditions (exterior)",
+      "Antibacterial (children's area)",
+      "Waterproof (bathrooms)"
+    ],
+    "delivery_timeline": "To be proposed by vendor in quotation, considering the submission deadline of Jan 15, 2025.",
+    "payment_terms": "Not specified in RFP"
+  },
+  "line_items": [
+    {
+      "item_description": "Interior walls painting",
+      "paint_type": "Interior",
+      "finish": "Not specified (premium washable)",
+      "quantity": 40,
+      "unit": "Liters",
+      "color_requirements": "Not specified",
+      "coverage_area": 5000,
+      "brand_preference": "Asian Paints (Royale Aspira or equivalent)",
+      "quality_standards": [
+        "Premium washable"
+      ]
+    },
+    {
+      "item_description": "Ceiling area painting",
+      "paint_type": "Interior",
+      "finish": "Matte",
+      "quantity": 15,
+      "unit": "Liters",
+      "color_requirements": "Not specified",
+      "coverage_area": 2000,
+      "brand_preference": "Asian Paints",
+      "quality_standards": []
+    },
+    {
+      "item_description": "Children's play area painting",
+      "paint_type": "Interior (Specialty)",
+      "finish": "Not specified",
+      "quantity": 4,
+      "unit": "Liters",
+      "color_requirements": "Not specified",
+      "coverage_area": 500,
+      "brand_preference": "Asian Paints (HealthShield or equivalent)",
+      "quality_standards": [
+        "Antibacterial",
+        "Health-focused"
+      ]
+    },
+    {
+      "item_description": "Bathroom painting",
+      "paint_type": "Interior (Specialty)",
+      "finish": "Not specified",
+      "quantity": 3,
+      "unit": "Liters",
+      "color_requirements": "Not specified",
+      "coverage_area": 300,
+      "brand_preference": "Asian Paints (SmartCare waterproof range)",
+      "quality_standards": [
+        "Waterproof"
+      ]
+    },
+    {
+      "item_description": "Exterior walls painting",
+      "paint_type": "Exterior",
+      "finish": "Premium",
+      "quantity": 90,
+      "unit": "Liters",
+      "color_requirements": "Not specified",
+      "coverage_area": 8000,
+      "brand_preference": "Asian Paints (Apex Ultima or equivalent)",
+      "quality_standards": [
+        "Weather-resistant",
+        "7+ years of durability",
+        "Must withstand Mumbai monsoon conditions"
+      ]
+    }
+  ],
+  "classification": {
+    "relevance": "Relevant",
+    "priority_score": 90,
+    "complexity": "Medium",
+    "recommended_action": "Proceed"
+  }
+}

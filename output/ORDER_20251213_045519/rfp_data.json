@@ -1,0 +1,55 @@
+{
+  "client_name": "Personal Care Section",
+  "location": null,
+  "order_date": "2025-12-12",
+  "deadline": "2025-12-20",
+  "line_items": [
+    {
+      "id": "1",
+      "description": "Pears Pure & Gentle Soap Bar (125g x 3) - 100 sets",
+      "item_name": "Pears Pure & Gentle Soap Bar",
+      "specifications": "125g x 3",
+      "quantity": 100,
+      "unit": "sets",
+      "category_hint": "Personal Care / Soap"
+    },
+    {
+      "id": "2",
+      "description": "Pond's Dreamflower Talc (400g) - 50 units",
+      "item_name": "Pond's Dreamflower Talc",
+      "specifications": "400g",
+      "quantity": 50,
+      "unit": "units",
+      "category_hint": "Personal Care / Talc"
+    },
+    {
+      "id": "3",
+      "description": "Vaseline Intensive Care Lotion (400ml) - 75 units",
+      "item_name": "Vaseline Intensive Care Lotion",
+      "specifications": "400ml",
+      "quantity": 75,
+      "unit": "units",
+      "category_hint": "Personal Care / Lotion"
+    },
+    {
+      "id": "4",
+      "description": "Lakme Peach Milk Moisturizer - 60 units",
+      "item_name": "Lakme Peach Milk Moisturizer",
+      "specifications": null,
+      "quantity": 60,
+      "unit": "units",
+      "category_hint": "Personal Care / Moisturizer"
+    },
+    {
+      "id": "5",
+      "description": "Tresemme Keratin Smooth Shampoo (580ml) - 30 units",
+      "item_name": "Tresemme Keratin Smooth Shampoo",
+      "specifications": "580ml",
+      "quantity": 30,
+      "unit": "units",
+      "category_hint": "Personal Care / Shampoo"
+    }
+  ],
+  "is_relevant": true,
+  "priority_score": 80
+}

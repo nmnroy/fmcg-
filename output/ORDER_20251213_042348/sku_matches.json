@@ -1,0 +1,54 @@
+{
+  "matches": [
+    {
+      "line_item_id": "1",
+      "original_desc": "Pears Pure & Gentle Soap Bar (125g x 3) - 100 sets",
+      "matched_sku_code": null,
+      "matched_sku_name": "",
+      "matched_sku_details": "",
+      "match_confidence_score": 0.0,
+      "reason": "No suitable candidates provided.",
+      "is_ambiguous": false
+    },
+    {
+      "line_item_id": "2",
+      "original_desc": "Pond's Dreamflower Talc (400g) - 50 units",
+      "matched_sku_code": null,
+      "matched_sku_name": "",
+      "matched_sku_details": "",
+      "match_confidence_score": 0.0,
+      "reason": "No suitable candidates provided.",
+      "is_ambiguous": false
+    },
+    {
+      "line_item_id": "3",
+      "original_desc": "Vaseline Intensive Care Lotion (400ml) - 75 units",
+      "matched_sku_code": null,
+      "matched_sku_name": "",
+      "matched_sku_details": "",
+      "match_confidence_score": 0.0,
+      "reason": "No suitable candidates provided.",
+      "is_ambiguous": false
+    },
+    {
+      "line_item_id": "4",
+      "original_desc": "Lakme Peach Milk Moisturizer - 60 units",
+      "matched_sku_code": null,
+      "matched_sku_name": "",
+      "matched_sku_details": "",
+      "match_confidence_score": 0.0,
+      "reason": "No suitable candidates provided.",
+      "is_ambiguous": false
+    },
+    {
+      "line_item_id": "5",
+      "original_desc": "Tresemme Keratin Smooth Shampoo (580ml) - 30 units",
+      "matched_sku_code": null,
+      "matched_sku_name": "",
+      "matched_sku_details": "",
+      "match_confidence_score": 0.0,
+      "reason": "No suitable candidates provided.",
+      "is_ambiguous": false
+    }
+  ]
+}

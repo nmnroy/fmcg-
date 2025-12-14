@@ -1,0 +1,28 @@
+{
+  "rfp_id": "AP-RFP-2024-001",
+  "metadata": {
+    "client_name": "Global Foods Inc.",
+    "project_name": "Q4 2024 Beverage Supply Contract",
+    "project_type": "Commercial",
+    "location": "Not specified",
+    "submission_deadline": "12/15/2024",
+    "estimated_value": "$50,000",
+    "contact_info": "Not specified",
+    "project_area_sqft": "Not applicable",
+    "total_paint_requirement": "Not applicable"
+  },
+  "requirements": {
+    "summary": "RFP for the supply of various food and beverage items, including premium tea bags, instant coffee, and cooking oil.",
+    "technical_specs": [],
+    "quality_standards": [],
+    "delivery_timeline": "Not specified",
+    "payment_terms": "Not specified"
+  },
+  "line_items": [],
+  "classification": {
+    "relevance": "Not Relevant",
+    "priority_score": 1,
+    "complexity": "Low",
+    "recommended_action": "Decline"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "summary": {
+    "total_value": 330400,
+    "overall_margin_pct": 16
+  },
+  "details": {
+    "material_cost": 200000,
+    "labor_cost": 80000,
+    "total_before_gst": 280000,
+    "gst_amount": 50400,
+    "total_value": 330400,
+    "margin_pct": 16
+  }
+}

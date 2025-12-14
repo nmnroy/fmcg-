@@ -1,0 +1,118 @@
+{
+  "client_name": "DMart Hypermarket",
+  "location": "Thane West",
+  "order_date": "22-Dec-2025",
+  "deadline": "26-Dec-2025",
+  "line_items": [
+    {
+      "id": "1",
+      "description": "500 pcs - Sunsilk Black Shine Shampoo (180ml).",
+      "item_name": "Sunsilk Black Shine Shampoo",
+      "specifications": "180ml",
+      "quantity": 500,
+      "unit": "pcs",
+      "category_hint": "Personal Care"
+    },
+    {
+      "id": "2",
+      "description": "250 pcs - Sunsilk Black Shine (650ml Family Pack).",
+      "item_name": "Sunsilk Black Shine",
+      "specifications": "650ml Family Pack",
+      "quantity": 250,
+      "unit": "pcs",
+      "category_hint": "Personal Care"
+    },
+    {
+      "id": "3",
+      "description": "200 pcs - Dove Intense Repair Shampoo (340ml).",
+      "item_name": "Dove Intense Repair Shampoo",
+      "specifications": "340ml",
+      "quantity": 200,
+      "unit": "pcs",
+      "category_hint": "Personal Care"
+    },
+    {
+      "id": "4",
+      "description": "150 pcs - Tresemme Keratin Smooth Shampoo (580ml).",
+      "item_name": "Tresemme Keratin Smooth Shampoo",
+      "specifications": "580ml",
+      "quantity": 150,
+      "unit": "pcs",
+      "category_hint": "Personal Care"
+    },
+    {
+      "id": "5",
+      "description": "600 tubes - Pond's Bright Beauty Face Wash (100g).",
+      "item_name": "Pond's Bright Beauty Face Wash",
+      "specifications": "100g",
+      "quantity": 600,
+      "unit": "tubes",
+      "category_hint": "Personal Care"
+    },
+    {
+      "id": "6",
+      "description": "300 bottles - Vaseline Deep Moisture Body Lotion (400ml).",
+      "item_name": "Vaseline Deep Moisture Body Lotion",
+      "specifications": "400ml",
+      "quantity": 300,
+      "unit": "bottles",
+      "category_hint": "Personal Care"
+    },
+    {
+      "id": "7",
+      "description": "100 tubes - Lakme 9to5 CC Cream (Beige).",
+      "item_name": "Lakme 9to5 CC Cream",
+      "specifications": "Beige",
+      "quantity": 100,
+      "unit": "tubes",
+      "category_hint": "Personal Care"
+    },
+    {
+      "id": "8",
+      "description": "1000 bottles - Vim Liquid Gel (750ml).",
+      "item_name": "Vim Liquid Gel",
+      "specifications": "750ml",
+      "quantity": 1000,
+      "unit": "bottles",
+      "category_hint": "Home Hygiene"
+    },
+    {
+      "id": "9",
+      "description": "500 packets - Surf Excel Matic Top Load Detergent (2kg).",
+      "item_name": "Surf Excel Matic Top Load Detergent",
+      "specifications": "2kg",
+      "quantity": 500,
+      "unit": "packets",
+      "category_hint": "Home Hygiene"
+    },
+    {
+      "id": "10",
+      "description": "250 cans - Domex Floor Cleaner (1L).",
+      "item_name": "Domex Floor Cleaner",
+      "specifications": "1L",
+      "quantity": 250,
+      "unit": "cans",
+      "category_hint": "Home Hygiene"
+    },
+    {
+      "id": "11",
+      "description": "50 units - L'Oreal Paris Total Repair 5 (if TRESemme unavailable).",
+      "item_name": "L'Oreal Paris Total Repair 5",
+      "specifications": "Conditional on TRESemme unavailability",
+      "quantity": 50,
+      "unit": "units",
+      "category_hint": "New Listings"
+    },
+    {
+      "id": "12",
+      "description": "100 packs - Rin Bar (250g x 4).",
+      "item_name": "Rin Bar",
+      "specifications": "250g x 4",
+      "quantity": 100,
+      "unit": "packs",
+      "category_hint": "New Listings"
+    }
+  ],
+  "is_relevant": true,
+  "priority_score": 95
+}

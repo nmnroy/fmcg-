@@ -1,0 +1,50 @@
+{
+  "summary": {
+    "total_value": 362401,
+    "overall_margin_pct": 18
+  },
+  "details": {
+    "labour_cost": {
+      "skilled": 45900,
+      "unskilled": 22950,
+      "supervisor": 7650,
+      "total": 76500
+    },
+    "materials_cost": {
+      "primer": 22500,
+      "putty": 15000,
+      "paint": 105000,
+      "brushes_rollers": 7500,
+      "total_paint_material": 150000,
+      "add_ons": {
+        "sandpaper_masking": 8000,
+        "cleaning": 6000,
+        "protective_sheets": 6000,
+        "total_addons": 20000
+      }
+    },
+    "equipment_cost": {
+      "scaffolding": 21000,
+      "spray_machine": 6000,
+      "tools": 3000,
+      "total": 30000
+    },
+    "transport_logistics": {
+      "delivery": 5100,
+      "labor_transport": 1700,
+      "loading_unloading": 1700,
+      "total": 8500
+    },
+    "overheads": {
+      "site_management": 11060,
+      "utilities": 6636,
+      "safety_ppe": 4424,
+      "total": 22120
+    },
+    "tax": {
+      "subtotal_before_gst": 307120,
+      "gst_amount": 55281,
+      "grand_total": 362401
+    }
+  }
+}

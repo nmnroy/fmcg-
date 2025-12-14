@@ -1,0 +1,28 @@
+{
+  "rfp_id": "RFP-2025-001-AUTO",
+  "metadata": {
+    "client_name": "Could not extract from raw PDF stream",
+    "project_name": "Could not extract from raw PDF stream",
+    "project_type": "Could not extract from raw PDF stream",
+    "location": "Could not extract from raw PDF stream",
+    "submission_deadline": "Could not extract from raw PDF stream",
+    "estimated_value": "Could not extract from raw PDF stream",
+    "contact_info": "Could not extract from raw PDF stream",
+    "project_area_sqft": "Could not extract from raw PDF stream",
+    "total_paint_requirement": "Could not extract from raw PDF stream"
+  },
+  "requirements": {
+    "summary": "Could not extract from raw PDF stream",
+    "technical_specs": [],
+    "quality_standards": [],
+    "delivery_timeline": "Could not extract from raw PDF stream",
+    "payment_terms": "Could not extract from raw PDF stream"
+  },
+  "line_items": [],
+  "classification": {
+    "relevance": "Not Relevant",
+    "priority_score": 0,
+    "complexity": "N/A - Cannot parse content",
+    "recommended_action": "Decline - Cannot parse content"
+  }
+}

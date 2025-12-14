@@ -1,0 +1,61 @@
+{
+  "margin_rules": {
+    "minimum_margin_pct": 12,
+    "recommended_margin_pct": 20,
+    "strategic_margin_pct": 15,
+    "government_margin_pct": 10,
+    "dealer_margin_pct": 18
+  },
+  "discounts": {
+    "bulk_tier1": {
+      "min_quantity": 50,
+      "discount_pct": 5,
+      "description": "50-200 units"
+    },
+    "bulk_tier2": {
+      "min_quantity": 200,
+      "discount_pct": 10,
+      "description": "200-500 units"
+    },
+    "bulk_tier3": {
+      "min_quantity": 500,
+      "discount_pct": 15,
+      "description": "500-1000 units"
+    },
+    "bulk_tier4": {
+      "min_quantity": 1000,
+      "discount_pct": 18,
+      "description": "1000+ units (mega projects)"
+    },
+    "project_based": {
+      "min_value": 500000,
+      "discount_pct": 12,
+      "description": "Projects over ₹5 lakhs"
+    },
+    "government_tender": {
+      "additional_discount_pct": 5,
+      "description": "Government/PSU tenders"
+    },
+    "strategic_client": {
+      "additional_discount_pct": 3,
+      "description": "Major contractors/developers"
+    }
+  },
+  "approval_thresholds": {
+    "regional_manager_below_margin": 15,
+    "zonal_head_below_margin": 12,
+    "cfo_approval_below_margin": 10
+  },
+  "payment_terms": {
+    "standard": "30 days",
+    "government": "45-60 days",
+    "dealer": "15 days",
+    "project": "As per milestone"
+  },
+  "warranty_terms": {
+    "interior_emulsion": "2 years",
+    "exterior_emulsion": "5 years",
+    "weatherproof": "7 years",
+    "industrial": "3 years"
+  }
+}

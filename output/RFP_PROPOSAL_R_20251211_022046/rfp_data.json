@@ -1,0 +1,116 @@
+{
+  "rfp_id": "AP-RFP-2024-001",
+  "metadata": {
+    "client_name": "Metro Heights Apartment Complex",
+    "project_name": "Complete Interior and Exterior Painting",
+    "project_type": "Residential",
+    "location": "Mumbai, Maharashtra",
+    "submission_deadline": "15th January 2025",
+    "estimated_value": "Rs. 5,00,000 - Rs. 7,00,000",
+    "contact_info": "Mr. Rajesh Kumar - 9876543210",
+    "project_area_sqft": 15800,
+    "total_paint_requirement": 152
+  },
+  "requirements": {
+    "summary": "The RFP is for complete interior and exterior painting of the Metro Heights Apartment Complex in Mumbai. It requires premium washable interior paints, matte finish for ceilings, antibacterial paint for children's areas, waterproof paint for bathrooms, and weather-resistant exterior paint with high durability. All paints must be Asian Paints brand, with specific product ranges mentioned.",
+    "technical_specs": [
+      "Premium washable paint for interior walls",
+      "Matte finish for ceilings",
+      "Antibacterial/health-focused paint for children's play area",
+      "Waterproof paint for bathrooms",
+      "Weather-resistant exterior paint",
+      "7+ years durability for exterior paint",
+      "Must withstand Mumbai monsoon conditions",
+      "Warranty details required",
+      "Application cost per liter required",
+      "Number of coats required",
+      "Surface preparation requirements"
+    ],
+    "quality_standards": [
+      "Asian Paints brand mandatory",
+      "Interior walls: Royale Aspira or equivalent premium range",
+      "Exterior walls: Apex Ultima or equivalent premium range",
+      "Children's area: HealthShield or equivalent",
+      "Bathrooms: SmartCare waterproof range",
+      "7+ years durability for exterior"
+    ],
+    "delivery_timeline": "To be proposed in quotation",
+    "payment_terms": "To be proposed in quotation"
+  },
+  "line_items": [
+    {
+      "item_description": "Interior walls painting with premium washable paint",
+      "paint_type": "Interior",
+      "finish": "Rich Sheen",
+      "quantity": 40,
+      "unit": "liters",
+      "color_requirements": "Not specified",
+      "coverage_area": 5000,
+      "brand_preference": "Asian Paints Royale Aspira",
+      "quality_standards": [
+        "Premium washable"
+      ]
+    },
+    {
+      "item_description": "Ceiling area painting",
+      "paint_type": "Interior",
+      "finish": "Matte",
+      "quantity": 15,
+      "unit": "liters",
+      "color_requirements": "Not specified",
+      "coverage_area": 2000,
+      "brand_preference": "Asian Paints (implied)",
+      "quality_standards": [
+        "Matte finish"
+      ]
+    },
+    {
+      "item_description": "Children's play area painting with antibacterial/health-focused paint",
+      "paint_type": "Interior",
+      "finish": "Soft Sheen",
+      "quantity": 4,
+      "unit": "liters",
+      "color_requirements": "Not specified",
+      "coverage_area": 500,
+      "brand_preference": "Asian Paints HealthShield",
+      "quality_standards": [
+        "Antibacterial",
+        "Health-focused"
+      ]
+    },
+    {
+      "item_description": "Bathroom painting with waterproof paint",
+      "paint_type": "Interior",
+      "finish": "Semi-Gloss/Satin",
+      "quantity": 3,
+      "unit": "liters",
+      "color_requirements": "Not specified",
+      "coverage_area": 300,
+      "brand_preference": "Asian Paints SmartCare",
+      "quality_standards": [
+        "Waterproof"
+      ]
+    },
+    {
+      "item_description": "Exterior walls painting with weather-resistant paint",
+      "paint_type": "Exterior",
+      "finish": "Rich Sheen/Satin",
+      "quantity": 90,
+      "unit": "liters",
+      "color_requirements": "Not specified",
+      "coverage_area": 8000,
+      "brand_preference": "Asian Paints Apex Ultima",
+      "quality_standards": [
+        "Weather-resistant",
+        "7+ years durability",
+        "Withstand Mumbai monsoon"
+      ]
+    }
+  ],
+  "classification": {
+    "relevance": "Relevant",
+    "priority_score": 85,
+    "complexity": "Medium",
+    "recommended_action": "Proceed"
+  }
+}

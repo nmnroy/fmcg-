@@ -1,0 +1,56 @@
+{
+  "pricing_table": [
+    {
+      "sku_code": "LIFEBUOY125G",
+      "sku_name": "Lifebuoy Red Soap 125g",
+      "qty": 10,
+      "unit_price_base": 50.0,
+      "discount_pct": 0.0,
+      "net_unit_price": 50.0,
+      "line_total_price": 500.0
+    },
+    {
+      "sku_code": "KISANJAMBOTTLE",
+      "sku_name": "Kisan Ketchup/Jam Bottle",
+      "qty": 10,
+      "unit_price_base": 120.0,
+      "discount_pct": 0.0,
+      "net_unit_price": 120.0,
+      "line_total_price": 1200.0
+    },
+    {
+      "sku_code": "MAGGI_MASALA_SMALL",
+      "sku_name": "Maggi Masala Noodles (Small Packet)",
+      "qty": 10,
+      "unit_price_base": 18.0,
+      "discount_pct": 0.0,
+      "net_unit_price": 18.0,
+      "line_total_price": 180.0
+    },
+    {
+      "sku_code": "COLGATE100G",
+      "sku_name": "Colgate Toothpaste 100g",
+      "qty": 10,
+      "unit_price_base": 85.0,
+      "discount_pct": 0.0,
+      "net_unit_price": 85.0,
+      "line_total_price": 850.0
+    },
+    {
+      "sku_code": "PAMPERS_L_PACK",
+      "sku_name": "Pampers Pants L Size Pack",
+      "qty": 10,
+      "unit_price_base": 400.0,
+      "discount_pct": 0.0,
+      "net_unit_price": 400.0,
+      "line_total_price": 4000.0
+    }
+  ],
+  "summary": {
+    "subtotal": 6730.0,
+    "total_discount_amount": 0,
+    "tax_amount": 1211.3999999999999,
+    "grand_total": 7941.4,
+    "overall_margin_pct": 20
+  }
+}

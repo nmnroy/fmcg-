@@ -1,0 +1,5 @@
+Simple RFP Test
+
+Client: Test Company
+We need 100 boxes of biscuits and 50 bottles of cooking oil.
+Deadline: 2024-12-31

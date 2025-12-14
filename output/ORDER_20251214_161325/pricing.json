@@ -1,0 +1,119 @@
+{
+  "pricing_table": [
+    {
+      "sku_code": "None",
+      "sku_name": "Unmatched",
+      "qty": 10,
+      "unit_price_base": 250.0,
+      "discount_pct": 0.0,
+      "net_unit_price": 250.0,
+      "line_total_price": 2500.0
+    },
+    {
+      "sku_code": "None",
+      "sku_name": "Unmatched",
+      "qty": 10,
+      "unit_price_base": 250.0,
+      "discount_pct": 0.0,
+      "net_unit_price": 250.0,
+      "line_total_price": 2500.0
+    },
+    {
+      "sku_code": "None",
+      "sku_name": "Unmatched",
+      "qty": 10,
+      "unit_price_base": 250.0,
+      "discount_pct": 0.0,
+      "net_unit_price": 250.0,
+      "line_total_price": 2500.0
+    },
+    {
+      "sku_code": "None",
+      "sku_name": "Unmatched",
+      "qty": 10,
+      "unit_price_base": 250.0,
+      "discount_pct": 0.0,
+      "net_unit_price": 250.0,
+      "line_total_price": 2500.0
+    },
+    {
+      "sku_code": "None",
+      "sku_name": "Unmatched",
+      "qty": 10,
+      "unit_price_base": 250.0,
+      "discount_pct": 0.0,
+      "net_unit_price": 250.0,
+      "line_total_price": 2500.0
+    },
+    {
+      "sku_code": "None",
+      "sku_name": "Unmatched",
+      "qty": 10,
+      "unit_price_base": 250.0,
+      "discount_pct": 0.0,
+      "net_unit_price": 250.0,
+      "line_total_price": 2500.0
+    },
+    {
+      "sku_code": "None",
+      "sku_name": "Unmatched",
+      "qty": 10,
+      "unit_price_base": 250.0,
+      "discount_pct": 0.0,
+      "net_unit_price": 250.0,
+      "line_total_price": 2500.0
+    },
+    {
+      "sku_code": "None",
+      "sku_name": "Unmatched",
+      "qty": 10,
+      "unit_price_base": 250.0,
+      "discount_pct": 0.0,
+      "net_unit_price": 250.0,
+      "line_total_price": 2500.0
+    },
+    {
+      "sku_code": "None",
+      "sku_name": "Unmatched",
+      "qty": 10,
+      "unit_price_base": 250.0,
+      "discount_pct": 0.0,
+      "net_unit_price": 250.0,
+      "line_total_price": 2500.0
+    },
+    {
+      "sku_code": "None",
+      "sku_name": "Unmatched",
+      "qty": 10,
+      "unit_price_base": 250.0,
+      "discount_pct": 0.0,
+      "net_unit_price": 250.0,
+      "line_total_price": 2500.0
+    },
+    {
+      "sku_code": "N/A",
+      "sku_name": "L'Oreal Paris Total Repair 5",
+      "qty": 10,
+      "unit_price_base": 450.0,
+      "discount_pct": 0.0,
+      "net_unit_price": 450.0,
+      "line_total_price": 4500.0
+    },
+    {
+      "sku_code": "N/A",
+      "sku_name": "Rin Bar (250g x 4)",
+      "qty": 10,
+      "unit_price_base": 280.0,
+      "discount_pct": 0.0,
+      "net_unit_price": 280.0,
+      "line_total_price": 2800.0
+    }
+  ],
+  "summary": {
+    "subtotal": 32300.0,
+    "total_discount_amount": 0,
+    "tax_amount": 5814.0,
+    "grand_total": 38114.0,
+    "overall_margin_pct": 20
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "win_probability_pct": 65,
+  "confidence_level": "Medium",
+  "risk_level": "Medium",
+  "risks": [
+    {
+      "type": "commercial",
+      "description": "Competitive market pricing pressure",
+      "severity": "medium",
+      "mitigation": "Emphasize Asian Paints quality and brand value"
+    }
+  ],
+  "strengths": [
+    "Asian Paints - India's leading paint brand",
+    "Wide product portfolio for all segments",
+    "Strong distribution and service network"
+  ],
+  "recommendations": [
+    "Highlight premium product benefits",
+    "Offer competitive warranty terms",
+    "Include free color consultation"
+  ]
+}

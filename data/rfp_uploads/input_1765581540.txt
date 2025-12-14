@@ -1,0 +1,42 @@
+PURCHASE ORDER: PO-DMART-HYD-X99
+Date: 13-Dec-2025
+From: DMart Regional Procurement (Hyderabad)
+To: Hindustan Unilever Ltd (Sales Division)
+Subject: Monthly Stock Replenishment - High Volume/Discounts Required
+
+Dear Sales Team,
+Please confirm stock and best pricing (including volume discounts) for the following requirements:
+
+SECTION A: HIGH VOLUME (Targeting >1000u Tier)
+1. "Surf Excel Matic Top Load Detergent" (2kg Packs)
+   - Quantity: 1200 units
+   - Requirement: Must be latest manufacturing batch.
+
+SECTION B: MEDIUM VOLUME (Targeting >500u Tier)
+2. "Sunsilk Black Shine Shampoo" (650ml Large Bottles)
+   - Quantity: 600 units
+   - Note: Urgent delivery required for this sku.
+
+SECTION C: STANDARD STOCK & AMBIGUOUS ITEMS (Testing RAG)
+3. "Dove Hair Fall Rescue Shampoo" (Small size preferred, approx 340ml?)
+   - Quantity: 150 units
+4. "Vim Dishwash Gel" (Large lemon variant)
+   - Quantity: 200 bottles
+   - Description: The one with lemon extract.
+
+SECTION D: COMPETITOR / MARKET ANALYSIS
+5. "Patanjali Dant Kanti Toothpaste" (Checking if you distribute this?)
+   - Quantity: 100 units
+   - If not available, propose Close Up or Pepsodent.
+6. "Head & Shoulders Smooth & Silky"
+   - Quantity: 50 units
+   - Do you have a direct alternative?
+
+COMMERCIALS:
+- Please apply maximum volume discounts (15% for >1000 units).
+- GST 18% applicable.
+- Delivery to Hyderabad Central Warehouse.
+
+Regards,
+Purchase Manager
+DMart Hyderabad

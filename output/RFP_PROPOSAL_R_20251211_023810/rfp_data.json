@@ -1,0 +1,108 @@
+{
+  "rfp_id": "AP-RFP-20241026-001",
+  "metadata": {
+    "client_name": "Metro Heights Apartment Complex",
+    "project_name": "Complete Interior and Exterior Painting",
+    "project_type": "Residential",
+    "location": "Mumbai, Maharashtra",
+    "submission_deadline": "15th January 2025",
+    "estimated_value": "Rs. 5,00,000 - Rs. 7,00,000",
+    "contact_info": "Mr. Rajesh Kumar - 9876543210",
+    "project_area_sqft": 15800,
+    "total_paint_requirement": 152
+  },
+  "requirements": {
+    "summary": "The Metro Heights Apartment Complex requires complete interior and exterior painting services. The project involves various paint types including premium washable interior paint, matte finish ceiling paint, antibacterial paint for children's areas, waterproof paint for bathrooms, and weather-resistant exterior paint with 7+ years durability. All paints must be Asian Paints brand, with specific product ranges mentioned.",
+    "technical_specs": [
+      "Premium washable paint for interior walls",
+      "Matte finish paint for ceilings",
+      "Antibacterial/health-focused paint for children's play area",
+      "Waterproof paint for bathrooms",
+      "Weather-resistant exterior paint with 7+ years durability",
+      "Must withstand Mumbai monsoon conditions",
+      "Specific brand preference: Asian Paints (Royale Aspira, Apex Ultima, HealthShield, SmartCare or equivalent)"
+    ],
+    "quality_standards": [
+      "7+ years durability for exterior paint",
+      "Weather-resistant for Mumbai monsoon",
+      "Washable interior paint",
+      "Antibacterial properties for children's area",
+      "Waterproof for bathrooms"
+    ],
+    "delivery_timeline": "To be proposed in quotation",
+    "payment_terms": "To be proposed in quotation"
+  },
+  "line_items": [
+    {
+      "item_description": "Interior walls painting with premium washable paint",
+      "paint_type": "Interior",
+      "finish": "Not specified (premium washable)",
+      "quantity": 40,
+      "unit": "liters",
+      "color_requirements": "Not specified",
+      "coverage_area": 5000,
+      "brand_preference": "Asian Paints (Royale Aspira or equivalent)",
+      "quality_standards": [
+        "Premium washable"
+      ]
+    },
+    {
+      "item_description": "Ceiling painting with matte finish paint",
+      "paint_type": "Interior",
+      "finish": "Matte",
+      "quantity": 15,
+      "unit": "liters",
+      "color_requirements": "Not specified",
+      "coverage_area": 2000,
+      "brand_preference": "Asian Paints",
+      "quality_standards": []
+    },
+    {
+      "item_description": "Children's play area painting with antibacterial/health-focused paint",
+      "paint_type": "Interior",
+      "finish": "Not specified",
+      "quantity": 4,
+      "unit": "liters",
+      "color_requirements": "Not specified",
+      "coverage_area": 500,
+      "brand_preference": "Asian Paints (HealthShield or equivalent)",
+      "quality_standards": [
+        "Antibacterial/health-focused"
+      ]
+    },
+    {
+      "item_description": "Bathroom painting with waterproof paint",
+      "paint_type": "Interior",
+      "finish": "Not specified",
+      "quantity": 3,
+      "unit": "liters",
+      "color_requirements": "Not specified",
+      "coverage_area": 300,
+      "brand_preference": "Asian Paints (SmartCare waterproof range or equivalent)",
+      "quality_standards": [
+        "Waterproof"
+      ]
+    },
+    {
+      "item_description": "Exterior walls painting with weather-resistant paint",
+      "paint_type": "Exterior",
+      "finish": "Premium finish",
+      "quantity": 90,
+      "unit": "liters",
+      "color_requirements": "Not specified",
+      "coverage_area": 8000,
+      "brand_preference": "Asian Paints (Apex Ultima or equivalent)",
+      "quality_standards": [
+        "Weather-resistant",
+        "7+ years durability",
+        "Must withstand Mumbai monsoon conditions"
+      ]
+    }
+  ],
+  "classification": {
+    "relevance": "Relevant",
+    "priority_score": 85,
+    "complexity": "Medium",
+    "recommended_action": "Proceed"
+  }
+}

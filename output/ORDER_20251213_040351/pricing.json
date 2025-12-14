@@ -1,0 +1,55 @@
+{
+  "pricing_table": [
+    {
+      "sku_code": "N/A",
+      "sku_name": "500 pcs of that red soap (Lifebuoy i think 125g)",
+      "qty": 500,
+      "unit_price_base": 120.0,
+      "discount_pct": 10.0,
+      "net_unit_price": 108.0,
+      "line_total_price": 54000.0
+    },
+    {
+      "sku_code": "N/A",
+      "sku_name": "200 bottles of ketchup kisan jam",
+      "qty": 200,
+      "unit_price_base": 180.0,
+      "discount_pct": 5.0,
+      "net_unit_price": 171.0,
+      "line_total_price": 34200.0
+    },
+    {
+      "sku_code": "N/A",
+      "sku_name": "1000 maggi packets (masala, small one)",
+      "qty": 1000,
+      "unit_price_base": 25.0,
+      "discount_pct": 15.0,
+      "net_unit_price": 21.25,
+      "line_total_price": 21250.0
+    },
+    {
+      "sku_code": "N/A",
+      "sku_name": "colgate paste 100g 300 nos",
+      "qty": 300,
+      "unit_price_base": 80.0,
+      "discount_pct": 5.0,
+      "net_unit_price": 76.0,
+      "line_total_price": 22800.0
+    },
+    {
+      "sku_code": "N/A",
+      "sku_name": "pampers pants L size? give me 50 packs if yes.",
+      "qty": 50,
+      "unit_price_base": 600.0,
+      "discount_pct": 0.0,
+      "net_unit_price": 600.0,
+      "line_total_price": 30000.0
+    }
+  ],
+  "summary": {
+    "subtotal": 162250.0,
+    "total_discount_amount": 0,
+    "tax_amount": 29205.0,
+    "grand_total": 191455.0
+  }
+}

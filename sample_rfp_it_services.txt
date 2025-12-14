@@ -1,0 +1,43 @@
+**REQUEST FOR PROPOSAL (RFP) - CLOUD MIGRATION & MANAGED SERVICES**
+
+**RFP Reference:** TECH-2025-CLOUD-088
+**Date:** December 11, 2025
+**Client:** Global FinTech Solutions Ltd.
+**Location:** Mumbai & Singapore HQ
+
+**1. Executive Summary**
+   Global FinTech Solutions aims to migrate its legacy on-premise data center infrastructure to a hybrid cloud environment (AWS/Azure) to improve scalability, security, and operational efficiency.
+
+**2. Scope of Work**
+   
+   **A. Infrastructure Migration**
+   - **Current State:** 500+ Virtual Machines (VMware), 50 TB Oracle Database, 100 TB File Storage.
+   - **Target State:** 
+     - Re-host (Lift & Shift) 40% of workloads.
+     - Re-platform (Managed Databases) 30% of workloads.
+     - Re-architect (Microservices/Containers) 30% of critical apps.
+   - **Timeline:** 12-month phased migration.
+
+   **B. Managed Services (3-Year Contract)**
+   - 24x7 Monitoring & Incident Management (L1/L2/L3 Support).
+   - Security Operations Center (SOC) integration.
+   - DevOps Pipeline Management (CI/CD).
+   - Quarterly Disaster Recovery (DR) drills.
+
+   **C. Compliance & Security**
+   - Must adhere to MAS (Singapore) and RBI (India) data localization norms.
+   - PCI-DSS Level 1 certification required.
+
+**3. Submission Requirements**
+   - Technical Architecture Blueprint.
+   - Migration Strategy (Low downtime approach compliant with financial trading hours).
+   - Team Structure (Project Manager, Cloud Architects, Security Experts).
+   - Commercial Bid:
+     - One-time Migration Fee.
+     - Monthly Recurring Software/Tooling Costs.
+     - Managed Services Monthly Retainer.
+
+**4. Evaluation Criteria**
+   - Technical Competence & Relevant Case Studies (40%)
+   - Commercial competitiveness (30%)
+   - Security & Compliance approach (30%)

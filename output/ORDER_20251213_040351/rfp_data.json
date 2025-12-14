@@ -1,0 +1,55 @@
+{
+  "client_name": "Ramesh's Shop",
+  "location": "Andheri West store",
+  "order_date": "N/A",
+  "deadline": "ASAP",
+  "line_items": [
+    {
+      "id": "1",
+      "description": "500 pcs of that red soap (Lifebuoy i think 125g)",
+      "item_name": "Lifebuoy Soap",
+      "specifications": "Red, 125g",
+      "quantity": 500,
+      "unit": "pcs",
+      "category_hint": "Personal Care, Soap"
+    },
+    {
+      "id": "2",
+      "description": "200 bottles of ketchup kisan jam",
+      "item_name": "Kissan Ketchup",
+      "specifications": "Ketchup",
+      "quantity": 200,
+      "unit": "bottles",
+      "category_hint": "Food, Condiments"
+    },
+    {
+      "id": "3",
+      "description": "1000 maggi packets (masala, small one)",
+      "item_name": "Maggi Noodles",
+      "specifications": "Masala flavor, Small size",
+      "quantity": 1000,
+      "unit": "packets",
+      "category_hint": "Food, Instant Noodles"
+    },
+    {
+      "id": "4",
+      "description": "colgate paste 100g 300 nos",
+      "item_name": "Colgate Toothpaste",
+      "specifications": "100g",
+      "quantity": 300,
+      "unit": "nos",
+      "category_hint": "Personal Care, Oral Care"
+    },
+    {
+      "id": "5",
+      "description": "pampers pants L size? give me 50 packs if yes.",
+      "item_name": "Pampers Diaper Pants",
+      "specifications": "L size",
+      "quantity": 50,
+      "unit": "packs",
+      "category_hint": "Baby Care, Diapers"
+    }
+  ],
+  "is_relevant": true,
+  "priority_score": 95
+}

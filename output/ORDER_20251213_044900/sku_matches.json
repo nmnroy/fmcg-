@@ -1,0 +1,64 @@
+{
+  "matches": [
+    {
+      "line_item_id": "1",
+      "original_desc": "Surf Excel Matic Top Load Detergent (2kg Packs)",
+      "matched_sku_code": null,
+      "matched_sku_name": "",
+      "matched_sku_details": "",
+      "match_confidence_score": 0.0,
+      "reason": "No matching candidates were provided in the dynamic catalog for this line item.",
+      "is_ambiguous": false
+    },
+    {
+      "line_item_id": "2",
+      "original_desc": "Sunsilk Black Shine Shampoo (650ml Large Bottles)",
+      "matched_sku_code": null,
+      "matched_sku_name": "",
+      "matched_sku_details": "",
+      "match_confidence_score": 0.0,
+      "reason": "No matching candidates were provided in the dynamic catalog for this line item.",
+      "is_ambiguous": false
+    },
+    {
+      "line_item_id": "3",
+      "original_desc": "Dove Hair Fall Rescue Shampoo (Small size preferred, approx 340ml?)",
+      "matched_sku_code": null,
+      "matched_sku_name": "",
+      "matched_sku_details": "",
+      "match_confidence_score": 0.0,
+      "reason": "No matching candidates were provided in the dynamic catalog for this line item.",
+      "is_ambiguous": false
+    },
+    {
+      "line_item_id": "4",
+      "original_desc": "Vim Dishwash Gel (Large lemon variant)",
+      "matched_sku_code": null,
+      "matched_sku_name": "",
+      "matched_sku_details": "",
+      "match_confidence_score": 0.0,
+      "reason": "No matching candidates were provided in the dynamic catalog for this line item.",
+      "is_ambiguous": false
+    },
+    {
+      "line_item_id": "5",
+      "original_desc": "Patanjali Dant Kanti Toothpaste (Checking if you distribute this?)",
+      "matched_sku_code": null,
+      "matched_sku_name": "",
+      "matched_sku_details": "",
+      "match_confidence_score": 0.0,
+      "reason": "No matching candidates were provided in the dynamic catalog for this line item.",
+      "is_ambiguous": false
+    },
+    {
+      "line_item_id": "6",
+      "original_desc": "Head & Shoulders Smooth & Silky",
+      "matched_sku_code": null,
+      "matched_sku_name": "",
+      "matched_sku_details": "",
+      "match_confidence_score": 0.0,
+      "reason": "No matching candidates were provided in the dynamic catalog for this line item.",
+      "is_ambiguous": false
+    }
+  ]
+}

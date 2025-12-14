@@ -1,0 +1,54 @@
+{
+  "matches": [
+    {
+      "line_item_id": "1",
+      "original_desc": "500 pcs of that red soap (Lifebuoy i think 125g)",
+      "matched_sku_code": null,
+      "matched_sku_name": "",
+      "matched_sku_details": "",
+      "match_confidence_score": 0.0,
+      "reason": "No candidate SKUs were provided for matching.",
+      "is_ambiguous": false
+    },
+    {
+      "line_item_id": "2",
+      "original_desc": "200 bottles of ketchup kisan jam",
+      "matched_sku_code": null,
+      "matched_sku_name": "",
+      "matched_sku_details": "",
+      "match_confidence_score": 0.0,
+      "reason": "No candidate SKUs were provided for matching.",
+      "is_ambiguous": false
+    },
+    {
+      "line_item_id": "3",
+      "original_desc": "1000 maggi packets (masala, small one)",
+      "matched_sku_code": null,
+      "matched_sku_name": "",
+      "matched_sku_details": "",
+      "match_confidence_score": 0.0,
+      "reason": "No candidate SKUs were provided for matching.",
+      "is_ambiguous": false
+    },
+    {
+      "line_item_id": "4",
+      "original_desc": "colgate paste 100g 300 nos",
+      "matched_sku_code": null,
+      "matched_sku_name": "",
+      "matched_sku_details": "",
+      "match_confidence_score": 0.0,
+      "reason": "No candidate SKUs were provided for matching.",
+      "is_ambiguous": false
+    },
+    {
+      "line_item_id": "5",
+      "original_desc": "pampers pants L size? give me 50 packs if yes.",
+      "matched_sku_code": null,
+      "matched_sku_name": "",
+      "matched_sku_details": "",
+      "match_confidence_score": 0.0,
+      "reason": "No candidate SKUs were provided for matching.",
+      "is_ambiguous": false
+    }
+  ]
+}

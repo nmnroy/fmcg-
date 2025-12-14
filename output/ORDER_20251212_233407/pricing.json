@@ -1,0 +1,64 @@
+{
+  "pricing_table": [
+    {
+      "sku_code": "None",
+      "sku_name": "Unmatched",
+      "qty": 10,
+      "unit_price_base": 0.0,
+      "discount_pct": 0.0,
+      "net_unit_price": 0.0,
+      "line_total_price": 0.0
+    },
+    {
+      "sku_code": "None",
+      "sku_name": "Unmatched",
+      "qty": 10,
+      "unit_price_base": 0.0,
+      "discount_pct": 0.0,
+      "net_unit_price": 0.0,
+      "line_total_price": 0.0
+    },
+    {
+      "sku_code": "None",
+      "sku_name": "Unmatched",
+      "qty": 10,
+      "unit_price_base": 0.0,
+      "discount_pct": 0.0,
+      "net_unit_price": 0.0,
+      "line_total_price": 0.0
+    },
+    {
+      "sku_code": "None",
+      "sku_name": "Unmatched",
+      "qty": 10,
+      "unit_price_base": 0.0,
+      "discount_pct": 0.0,
+      "net_unit_price": 0.0,
+      "line_total_price": 0.0
+    },
+    {
+      "sku_code": "None",
+      "sku_name": "Unmatched",
+      "qty": 10,
+      "unit_price_base": 0.0,
+      "discount_pct": 0.0,
+      "net_unit_price": 0.0,
+      "line_total_price": 0.0
+    },
+    {
+      "sku_code": "None",
+      "sku_name": "Head & Shoulders Smooth & Silky",
+      "qty": 10,
+      "unit_price_base": 425.5,
+      "discount_pct": 0.0,
+      "net_unit_price": 425.5,
+      "line_total_price": 4255.0
+    }
+  ],
+  "summary": {
+    "subtotal": 4255.0,
+    "total_discount_amount": 0,
+    "tax_amount": 765.9,
+    "grand_total": 5020.9
+  }
+}

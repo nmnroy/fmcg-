@@ -1,0 +1,47 @@
+{
+  "pricing_table": [
+    {
+      "sku_code": "SURFEXCEL_MAT_TL_2KG",
+      "sku_name": "Surf Excel Matic Top Load Detergent (2kg Packs)",
+      "qty": 10,
+      "unit_price_base": 450.0,
+      "discount_pct": 0.0,
+      "net_unit_price": 450.0,
+      "line_total_price": 4500.0
+    },
+    {
+      "sku_code": "SUNSILK_BS_SHAMPOO_650ML",
+      "sku_name": "Sunsilk Black Shine Shampoo (650ml Large Bottles)",
+      "qty": 10,
+      "unit_price_base": 300.0,
+      "discount_pct": 0.0,
+      "net_unit_price": 300.0,
+      "line_total_price": 3000.0
+    },
+    {
+      "sku_code": "DOVE_HFR_SHAMPOO_340ML",
+      "sku_name": "Dove Hair Fall Rescue Shampoo (Small size preferred, approx 340ml?)",
+      "qty": 10,
+      "unit_price_base": 250.0,
+      "discount_pct": 0.0,
+      "net_unit_price": 250.0,
+      "line_total_price": 2500.0
+    },
+    {
+      "sku_code": "VIM_DISHWASH_GEL_LG",
+      "sku_name": "Vim Dishwash Gel (Large lemon variant)",
+      "qty": 10,
+      "unit_price_base": 180.0,
+      "discount_pct": 0.0,
+      "net_unit_price": 180.0,
+      "line_total_price": 1800.0
+    }
+  ],
+  "summary": {
+    "subtotal": 11800.0,
+    "total_discount_amount": 0,
+    "tax_amount": 2124.0,
+    "grand_total": 13924.0,
+    "overall_margin_pct": 20
+  }
+}

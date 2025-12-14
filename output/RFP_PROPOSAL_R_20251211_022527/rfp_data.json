@@ -1,0 +1,110 @@
+{
+  "rfp_id": "AP-RFP-20241120-001",
+  "metadata": {
+    "client_name": "Metro Heights Apartment Complex",
+    "project_name": "Complete Interior and Exterior Painting",
+    "project_type": "Residential",
+    "location": "Mumbai, Maharashtra",
+    "submission_deadline": "15th January 2025",
+    "estimated_value": "Rs. 5,00,000 - Rs. 7,00,000",
+    "contact_info": "Mr. Rajesh Kumar - 9876543210",
+    "project_area_sqft": 15800,
+    "total_paint_requirement": 152
+  },
+  "requirements": {
+    "summary": "The RFP requires complete interior and exterior painting for Metro Heights Apartment Complex. It specifies premium washable paint for interior walls, matte finish for ceilings, antibacterial paint for children's areas, waterproof paint for bathrooms, and weather-resistant paint for exterior walls with 7+ years durability. All paints must be Asian Paints brand, with specific product lines mentioned.",
+    "technical_specs": [
+      "Premium washable paint for interior walls",
+      "Matte finish for ceiling area",
+      "Antibacterial/health-focused paint for children's play area",
+      "Waterproof paint for bathrooms",
+      "Weather-resistant paint for exterior walls with 7+ years durability",
+      "Must withstand Mumbai monsoon conditions",
+      "Specific brand preferences: Asian Paints Royale Aspira (interior walls), Apex Ultima (exterior walls), HealthShield (children's area), SmartCare (bathrooms)",
+      "Request for warranty details, application cost per liter, number of coats, and surface preparation requirements"
+    ],
+    "quality_standards": [
+      "Premium washable for interior walls",
+      "Antibacterial/health-focused for children's area",
+      "Waterproof for bathrooms",
+      "Weather-resistant with 7+ years durability for exterior walls",
+      "Ability to withstand Mumbai monsoon conditions"
+    ],
+    "delivery_timeline": "To be proposed in quotation",
+    "payment_terms": "Not specified in RFP"
+  },
+  "line_items": [
+    {
+      "item_description": "Interior walls painting with premium washable paint",
+      "paint_type": "Interior",
+      "finish": "Not specified (implied premium finish)",
+      "quantity": 40,
+      "unit": "Liters",
+      "color_requirements": "Not specified",
+      "coverage_area": 5000,
+      "brand_preference": "Asian Paints Royale Aspira or equivalent premium range",
+      "quality_standards": [
+        "Premium washable"
+      ]
+    },
+    {
+      "item_description": "Ceiling area painting with matte finish paint",
+      "paint_type": "Interior",
+      "finish": "Matte",
+      "quantity": 15,
+      "unit": "Liters",
+      "color_requirements": "Not specified",
+      "coverage_area": 2000,
+      "brand_preference": "Asian Paints (implied)",
+      "quality_standards": []
+    },
+    {
+      "item_description": "Children's play area painting with antibacterial/health-focused paint",
+      "paint_type": "Interior",
+      "finish": "Not specified",
+      "quantity": 4,
+      "unit": "Liters",
+      "color_requirements": "Not specified",
+      "coverage_area": 500,
+      "brand_preference": "Asian Paints HealthShield or equivalent",
+      "quality_standards": [
+        "Antibacterial",
+        "Health-focused"
+      ]
+    },
+    {
+      "item_description": "Bathroom painting with waterproof paint",
+      "paint_type": "Interior",
+      "finish": "Not specified",
+      "quantity": 3,
+      "unit": "Liters",
+      "color_requirements": "Not specified",
+      "coverage_area": 300,
+      "brand_preference": "Asian Paints SmartCare waterproof range",
+      "quality_standards": [
+        "Waterproof"
+      ]
+    },
+    {
+      "item_description": "Exterior walls painting with weather-resistant paint",
+      "paint_type": "Exterior",
+      "finish": "Premium",
+      "quantity": 90,
+      "unit": "Liters",
+      "color_requirements": "Not specified",
+      "coverage_area": 8000,
+      "brand_preference": "Asian Paints Apex Ultima or equivalent premium range",
+      "quality_standards": [
+        "Weather-resistant",
+        "7+ years durability",
+        "Must withstand Mumbai monsoon conditions"
+      ]
+    }
+  ],
+  "classification": {
+    "relevance": "Relevant",
+    "priority_score": 85,
+    "complexity": "Medium",
+    "recommended_action": "Proceed"
+  }
+}

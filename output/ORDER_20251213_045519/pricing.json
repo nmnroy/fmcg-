@@ -1,0 +1,56 @@
+{
+  "pricing_table": [
+    {
+      "sku_code": "PEARS-SOAP-125G-3PC",
+      "sku_name": "Pears Pure & Gentle Soap Bar (125g x 3) - 100 sets",
+      "qty": 10,
+      "unit_price_base": 250.0,
+      "discount_pct": 0.0,
+      "net_unit_price": 250.0,
+      "line_total_price": 2500.0
+    },
+    {
+      "sku_code": "PONDS-TALC-400G",
+      "sku_name": "Pond's Dreamflower Talc (400g) - 50 units",
+      "qty": 10,
+      "unit_price_base": 180.0,
+      "discount_pct": 0.0,
+      "net_unit_price": 180.0,
+      "line_total_price": 1800.0
+    },
+    {
+      "sku_code": "VASELINE-LOTION-400ML",
+      "sku_name": "Vaseline Intensive Care Lotion (400ml) - 75 units",
+      "qty": 10,
+      "unit_price_base": 300.0,
+      "discount_pct": 0.0,
+      "net_unit_price": 300.0,
+      "line_total_price": 3000.0
+    },
+    {
+      "sku_code": "LAKME-MOIST-PEACH",
+      "sku_name": "Lakme Peach Milk Moisturizer - 60 units",
+      "qty": 10,
+      "unit_price_base": 280.0,
+      "discount_pct": 0.0,
+      "net_unit_price": 280.0,
+      "line_total_price": 2800.0
+    },
+    {
+      "sku_code": "TRESEMME-SHAMPOO-580ML",
+      "sku_name": "Tresemme Keratin Smooth Shampoo (580ml) - 30 units",
+      "qty": 10,
+      "unit_price_base": 450.0,
+      "discount_pct": 0.0,
+      "net_unit_price": 450.0,
+      "line_total_price": 4500.0
+    }
+  ],
+  "summary": {
+    "subtotal": 14600.0,
+    "total_discount_amount": 0,
+    "tax_amount": 2628.0,
+    "grand_total": 17228.0,
+    "overall_margin_pct": 20
+  }
+}

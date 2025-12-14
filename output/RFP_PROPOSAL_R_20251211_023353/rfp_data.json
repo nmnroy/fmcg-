@@ -1,0 +1,111 @@
+{
+  "rfp_id": "AP-RFP-MHAC-001",
+  "metadata": {
+    "client_name": "Metro Heights Apartment Complex",
+    "project_name": "Complete Interior and Exterior Painting",
+    "project_type": "Residential",
+    "location": "Mumbai, Maharashtra",
+    "submission_deadline": "15th January 2025",
+    "estimated_value": "Rs. 5,00,000 - Rs. 7,00,000",
+    "contact_info": "Mr. Rajesh Kumar - 9876543210",
+    "project_area_sqft": 15800,
+    "total_paint_requirement": 152
+  },
+  "requirements": {
+    "summary": "The RFP is for complete interior and exterior painting of the Metro Heights Apartment Complex. It requires premium washable interior paints, matte finish for ceilings, antibacterial paint for children's areas, waterproof paint for bathrooms, and weather-resistant exterior paint with high durability. There is a strong preference for Asian Paints brands.",
+    "technical_specs": [
+      "Premium washable paint for interior walls",
+      "Matte finish for ceiling area",
+      "Antibacterial/health-focused paint for children's play area",
+      "Waterproof paint for bathrooms",
+      "Weather-resistant paint for exterior walls",
+      "7+ years durability for exterior paint",
+      "Must withstand Mumbai monsoon conditions"
+    ],
+    "quality_standards": [
+      "All paints must be Asian Paints brand",
+      "Interior walls: Royale Aspira or equivalent premium range",
+      "Exterior walls: Apex Ultima or equivalent premium range",
+      "Children's area: HealthShield or equivalent",
+      "Bathrooms: SmartCare waterproof range or equivalent",
+      "Warranty details required"
+    ],
+    "delivery_timeline": "Not specified, to be proposed in quotation.",
+    "payment_terms": "Not specified, to be proposed in quotation."
+  },
+  "line_items": [
+    {
+      "item_description": "Interior walls painting",
+      "paint_type": "Interior",
+      "finish": "Premium washable",
+      "quantity": 40,
+      "unit": "liters",
+      "color_requirements": "Not specified",
+      "coverage_area": 5000,
+      "brand_preference": "Asian Paints (Royale Aspira or equivalent)",
+      "quality_standards": [
+        "Premium washable"
+      ]
+    },
+    {
+      "item_description": "Ceiling painting",
+      "paint_type": "Interior",
+      "finish": "Matte",
+      "quantity": 15,
+      "unit": "liters",
+      "color_requirements": "Not specified",
+      "coverage_area": 2000,
+      "brand_preference": "Asian Paints (equivalent to premium range)",
+      "quality_standards": [
+        "Matte finish"
+      ]
+    },
+    {
+      "item_description": "Children's play area painting",
+      "paint_type": "Interior",
+      "finish": "Not specified (health-focused)",
+      "quantity": 4,
+      "unit": "liters",
+      "color_requirements": "Not specified",
+      "coverage_area": 500,
+      "brand_preference": "Asian Paints (HealthShield or equivalent)",
+      "quality_standards": [
+        "Antibacterial/health-focused"
+      ]
+    },
+    {
+      "item_description": "Bathroom painting",
+      "paint_type": "Interior",
+      "finish": "Not specified (waterproof)",
+      "quantity": 3,
+      "unit": "liters",
+      "color_requirements": "Not specified",
+      "coverage_area": 300,
+      "brand_preference": "Asian Paints (SmartCare waterproof range or equivalent)",
+      "quality_standards": [
+        "Waterproof"
+      ]
+    },
+    {
+      "item_description": "Exterior walls painting",
+      "paint_type": "Exterior",
+      "finish": "Premium",
+      "quantity": 90,
+      "unit": "liters",
+      "color_requirements": "Not specified",
+      "coverage_area": 8000,
+      "brand_preference": "Asian Paints (Apex Ultima or equivalent)",
+      "quality_standards": [
+        "Weather-resistant",
+        "7+ years durability",
+        "Withstand Mumbai monsoon conditions"
+      ]
+    }
+  ],
+  "classification": {
+    "relevance": "Relevant",
+    "priority_score": 90,
+    "complexity": "Medium",
+    "recommended_action": "Proceed"
+  }
+}

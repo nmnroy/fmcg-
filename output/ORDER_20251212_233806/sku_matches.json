@@ -1,0 +1,64 @@
+{
+  "matches": [
+    {
+      "line_item_id": "1",
+      "original_desc": "Surf Excel Matic Top Load Detergent\" (2kg Packs) - Quantity: 1200 units - Requirement: Must be latest manufacturing batch.",
+      "matched_sku_code": null,
+      "matched_sku_name": "",
+      "matched_sku_details": "",
+      "match_confidence_score": 0.0,
+      "reason": "No candidates were provided for matching this line item.",
+      "is_ambiguous": false
+    },
+    {
+      "line_item_id": "2",
+      "original_desc": "Sunsilk Black Shine Shampoo\" (650ml Large Bottles) - Quantity: 600 units - Note: Urgent delivery required for this sku.",
+      "matched_sku_code": null,
+      "matched_sku_name": "",
+      "matched_sku_details": "",
+      "match_confidence_score": 0.0,
+      "reason": "No candidates were provided for matching this line item.",
+      "is_ambiguous": false
+    },
+    {
+      "line_item_id": "3",
+      "original_desc": "Dove Hair Fall Rescue Shampoo\" (Small size preferred, approx 340ml?) - Quantity: 150 units",
+      "matched_sku_code": null,
+      "matched_sku_name": "",
+      "matched_sku_details": "",
+      "match_confidence_score": 0.0,
+      "reason": "No candidates were provided for matching this line item.",
+      "is_ambiguous": false
+    },
+    {
+      "line_item_id": "4",
+      "original_desc": "Vim Dishwash Gel\" (Large lemon variant) - Quantity: 200 bottles - Description: The one with lemon extract.",
+      "matched_sku_code": null,
+      "matched_sku_name": "",
+      "matched_sku_details": "",
+      "match_confidence_score": 0.0,
+      "reason": "No candidates were provided for matching this line item.",
+      "is_ambiguous": false
+    },
+    {
+      "line_item_id": "5",
+      "original_desc": "Patanjali Dant Kanti Toothpaste\" (Checking if you distribute this?) - Quantity: 100 units - If not available, propose Close Up or Pepsodent.",
+      "matched_sku_code": null,
+      "matched_sku_name": "",
+      "matched_sku_details": "",
+      "match_confidence_score": 0.0,
+      "reason": "No candidates were provided for matching this line item.",
+      "is_ambiguous": false
+    },
+    {
+      "line_item_id": "6",
+      "original_desc": "Head & Shoulders Smooth & Silky",
+      "matched_sku_code": null,
+      "matched_sku_name": "",
+      "matched_sku_details": "",
+      "match_confidence_score": 0.0,
+      "reason": "No candidate SKUs were provided for matching.",
+      "is_ambiguous": false
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "matches": [
+    {
+      "line_item_id": "1",
+      "original_desc": "500 pcs - Sunsilk Black Shine Shampoo (180ml).",
+      "matched_sku_code": null,
+      "matched_sku_name": "Unmatched",
+      "matched_sku_details": "",
+      "match_confidence_score": 0.0,
+      "reason": "No matching candidates provided for this line item.",
+      "is_ambiguous": false
+    },
+    {
+      "line_item_id": "2",
+      "original_desc": "250 pcs - Sunsilk Black Shine (650ml Family Pack).",
+      "matched_sku_code": null,
+      "matched_sku_name": "Unmatched",
+      "matched_sku_details": "",
+      "match_confidence_score": 0.0,
+      "reason": "No matching candidates provided for this line item.",
+      "is_ambiguous": false
+    },
+    {
+      "line_item_id": "3",
+      "original_desc": "200 pcs - Dove Intense Repair Shampoo (340ml).",
+      "matched_sku_code": null,
+      "matched_sku_name": "Unmatched",
+      "matched_sku_details": "",
+      "match_confidence_score": 0.0,
+      "reason": "No matching candidates provided for this line item.",
+      "is_ambiguous": false
+    },
+    {
+      "line_item_id": "4",
+      "original_desc": "150 pcs - Tresemme Keratin Smooth Shampoo (580ml).",
+      "matched_sku_code": null,
+      "matched_sku_name": "Unmatched",
+      "matched_sku_details": "",
+      "match_confidence_score": 0.0,
+      "reason": "No matching candidates provided for this line item.",
+      "is_ambiguous": false
+    },
+    {
+      "line_item_id": "5",
+      "original_desc": "600 tubes - Pond's Bright Beauty Face Wash (100g).",
+      "matched_sku_code": null,
+      "matched_sku_name": "Unmatched",
+      "matched_sku_details": "",
+      "match_confidence_score": 0.0,
+      "reason": "No matching candidates provided for this line item.",
+      "is_ambiguous": false
+    },
+    {
+      "line_item_id": "6",
+      "original_desc": "300 bottles - Vaseline Deep Moisture Body Lotion (400ml).",
+      "matched_sku_code": null,
+      "matched_sku_name": "Unmatched",
+      "matched_sku_details": "",
+      "match_confidence_score": 0.0,
+      "reason": "No matching candidates provided for this line item.",
+      "is_ambiguous": false
+    },
+    {
+      "line_item_id": "7",
+      "original_desc": "100 tubes - Lakme 9to5 CC Cream (Beige).",
+      "matched_sku_code": null,
+      "matched_sku_name": "Unmatched",
+      "matched_sku_details": "",
+      "match_confidence_score": 0.0,
+      "reason": "No matching candidates provided for this line item.",
+      "is_ambiguous": false
+    },
+    {
+      "line_item_id": "8",
+      "original_desc": "1000 bottles - Vim Liquid Gel (750ml).",
+      "matched_sku_code": null,
+      "matched_sku_name": "Unmatched",
+      "matched_sku_details": "",
+      "match_confidence_score": 0.0,
+      "reason": "No matching candidates provided for this line item.",
+      "is_ambiguous": false
+    },
+    {
+      "line_item_id": "9",
+      "original_desc": "500 packets - Surf Excel Matic Top Load Detergent (2kg).",
+      "matched_sku_code": null,
+      "matched_sku_name": "Unmatched",
+      "matched_sku_details": "",
+      "match_confidence_score": 0.0,
+      "reason": "No matching candidates provided for this line item.",
+      "is_ambiguous": false
+    },
+    {
+      "line_item_id": "10",
+      "original_desc": "250 cans - Domex Floor Cleaner (1L).",
+      "matched_sku_code": null,
+      "matched_sku_name": "Unmatched",
+      "matched_sku_details": "",
+      "match_confidence_score": 0.0,
+      "reason": "No matching candidates provided for this line item.",
+      "is_ambiguous": false
+    },
+    {
+      "line_item_id": "11",
+      "original_desc": "50 units - L'Oreal Paris Total Repair 5 (if TRESemme unavailable).",
+      "matched_sku_code": null,
+      "matched_sku_name": "",
+      "matched_sku_details": "",
+      "match_confidence_score": 0.0,
+      "reason": "No candidates were provided for matching this line item.",
+      "is_ambiguous": false
+    },
+    {
+      "line_item_id": "12",
+      "original_desc": "100 packs - Rin Bar (250g x 4).",
+      "matched_sku_code": null,
+      "matched_sku_name": "",
+      "matched_sku_details": "",
+      "match_confidence_score": 0.0,
+      "reason": "No candidates were provided for matching this line item.",
+      "is_ambiguous": false
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+**REQUEST FOR PROPOSAL - CLOUD MIGRATION & MANAGED SERVICES**
+**Client:** Global FinTech Solutions Ltd.
+
+**Scope of Work:**
+A. Infrastructure Migration
+   - Migrate 500+ VMs & 50 TB managed databases from on-prem to AWS/Azure.
+   - Refactoring 30% of critical apps to Microservices.
+
+B. Managed Services (3-Year Contract)
+   - 24x7 Monitoring & L1-L3 Support.
+   - DevOps Pipeline Management (CI/CD).
+   - Compliance: PCI-DSS Level 1 & Data Localization.
+
+**Evaluation Criteria:**
+   - Technical Architecture & Strategy (40%)
+   - Commercial competitiveness (30%)

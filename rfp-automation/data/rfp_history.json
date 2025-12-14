@@ -1,0 +1,106 @@
+[
+  {
+    "rfp_id": "RFP_PROPOSAL_R_20251209_211756",
+    "timestamp": "2025-12-09T21:17:56.076307",
+    "filename": "text_input_20251209_211756.txt",
+    "win_probability": 65,
+    "quote_value": 500000,
+    "margin": 16
+  },
+  {
+    "rfp_id": "RFP_PROPOSAL_R_20251209_211743",
+    "timestamp": "2025-12-09T21:17:43.649162",
+    "filename": "text_input_20251209_211743.txt",
+    "win_probability": 65,
+    "quote_value": 500000,
+    "margin": 16
+  },
+  {
+    "rfp_id": "RFP_PROPOSAL_R_20251209_211646",
+    "timestamp": "2025-12-09T21:16:46.125085",
+    "filename": "text_input_20251209_211646.txt",
+    "win_probability": 65,
+    "quote_value": 500000,
+    "margin": 16
+  },
+  {
+    "rfp_id": "RFP_PROPOSAL_R_20251209_211633",
+    "timestamp": "2025-12-09T21:16:33.031041",
+    "filename": "text_input_20251209_211633.txt",
+    "win_probability": 65,
+    "quote_value": 500000,
+    "margin": 16
+  },
+  {
+    "rfp_id": "RFP_PROPOSAL_R_20251209_170731",
+    "timestamp": "2025-12-09T17:07:31.113095",
+    "filename": "text_input_20251209_170731.txt",
+    "win_probability": 65,
+    "quote_value": 500000,
+    "margin": 16
+  },
+  {
+    "rfp_id": "AP-RFP-text_input_2025-20251209",
+    "timestamp": "2025-12-09T01:33:13.999032",
+    "filename": "text_input_20251209_013313.txt",
+    "win_probability": 0,
+    "quote_value": 0,
+    "margin": 0
+  },
+  {
+    "rfp_id": "AP-RFP-text_input_2025-20251209",
+    "timestamp": "2025-12-09T01:33:00.281362",
+    "filename": "text_input_20251209_013300.txt",
+    "win_probability": 0,
+    "quote_value": 0,
+    "margin": 0
+  },
+  {
+    "rfp_id": "AP-RFP-text_input_2025-20251209",
+    "timestamp": "2025-12-09T01:32:57.167936",
+    "filename": "text_input_20251209_013257.txt",
+    "win_probability": 0,
+    "quote_value": 0,
+    "margin": 0
+  },
+  {
+    "rfp_id": "AP-RFP-text_input_2025-20251209",
+    "timestamp": "2025-12-09T01:32:53.139904",
+    "filename": "text_input_20251209_013253.txt",
+    "win_probability": 0,
+    "quote_value": 0,
+    "margin": 0
+  },
+  {
+    "rfp_id": "AP-RFP-text_input_2025-20251209",
+    "timestamp": "2025-12-09T01:28:55.655405",
+    "filename": "text_input_20251209_012848.txt",
+    "win_probability": 0,
+    "quote_value": 0,
+    "margin": 0
+  },
+  {
+    "rfp_id": "AP-RES-2025-045-001",
+    "timestamp": "2025-12-09T01:00:09.840305",
+    "filename": "Sample RFP - Residential Housing Complex.pdf",
+    "win_probability": 40,
+    "quote_value": 0.0,
+    "margin": 0.0
+  },
+  {
+    "rfp_id": "RFP_FALLBACK_20251208_052731",
+    "timestamp": "2025-12-08T05:27:32.966359",
+    "filename": "Sample RFP - Commercial Building Painting Project.pdf",
+    "win_probability": 40,
+    "quote_value": 0.0,
+    "margin": 0.0
+  },
+  {
+    "rfp_id": "RFP_FALLBACK_20251208_052700",
+    "timestamp": "2025-12-08T05:27:01.866000",
+    "filename": "Sample RFP - Commercial Building Painting Project.pdf",
+    "win_probability": 40,
+    "quote_value": 0.0,
+    "margin": 0.0
+  }
+]

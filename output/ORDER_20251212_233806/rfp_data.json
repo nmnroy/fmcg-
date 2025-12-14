@@ -1,0 +1,64 @@
+{
+  "client_name": "DMart Hyderabad",
+  "location": "Hyderabad",
+  "order_date": "13-Dec-2025",
+  "deadline": "",
+  "line_items": [
+    {
+      "id": "1",
+      "description": "\"Surf Excel Matic Top Load Detergent\" (2kg Packs) - Quantity: 1200 units - Requirement: Must be latest manufacturing batch.",
+      "item_name": "Surf Excel Matic Top Load Detergent",
+      "specifications": "2kg Packs, Top Load, latest manufacturing batch",
+      "quantity": 1200,
+      "unit": "units",
+      "category_hint": "Detergent, Home Care"
+    },
+    {
+      "id": "2",
+      "description": "\"Sunsilk Black Shine Shampoo\" (650ml Large Bottles) - Quantity: 600 units - Note: Urgent delivery required for this sku.",
+      "item_name": "Sunsilk Black Shine Shampoo",
+      "specifications": "650ml Large Bottles, Black Shine, Urgent delivery required",
+      "quantity": 600,
+      "unit": "units",
+      "category_hint": "Shampoo, Hair Care"
+    },
+    {
+      "id": "3",
+      "description": "\"Dove Hair Fall Rescue Shampoo\" (Small size preferred, approx 340ml?) - Quantity: 150 units",
+      "item_name": "Dove Hair Fall Rescue Shampoo",
+      "specifications": "Small size preferred, approx 340ml, Hair Fall Rescue",
+      "quantity": 150,
+      "unit": "units",
+      "category_hint": "Shampoo, Hair Care"
+    },
+    {
+      "id": "4",
+      "description": "\"Vim Dishwash Gel\" (Large lemon variant) - Quantity: 200 bottles - Description: The one with lemon extract.",
+      "item_name": "Vim Dishwash Gel",
+      "specifications": "Large lemon variant, with lemon extract",
+      "quantity": 200,
+      "unit": "bottles",
+      "category_hint": "Dishwash, Home Care"
+    },
+    {
+      "id": "5",
+      "description": "\"Patanjali Dant Kanti Toothpaste\" (Checking if you distribute this?) - Quantity: 100 units - If not available, propose Close Up or Pepsodent.",
+      "item_name": "Patanjali Dant Kanti Toothpaste",
+      "specifications": "Checking distribution, propose Close Up or Pepsodent if not available",
+      "quantity": 100,
+      "unit": "units",
+      "category_hint": "Toothpaste, Oral Care"
+    },
+    {
+      "id": "6",
+      "description": "\"Head & Shoulders Smooth & Silky\" - Quantity: 50 units - Do you have a direct alternative?",
+      "item_name": "Head & Shoulders Smooth & Silky",
+      "specifications": "Smooth & Silky, checking for direct alternative",
+      "quantity": 50,
+      "unit": "units",
+      "category_hint": "Shampoo, Hair Care"
+    }
+  ],
+  "is_relevant": true,
+  "priority_score": 90
+}

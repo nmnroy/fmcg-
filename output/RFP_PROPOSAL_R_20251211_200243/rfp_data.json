@@ -1,0 +1,28 @@
+{
+  "rfp_id": "RFP-UNPARSABLE-20240101-001",
+  "metadata": {
+    "client_name": "N/A - Content Unparsable",
+    "project_name": "N/A - Content Unparsable",
+    "project_type": "N/A - Content Unparsable",
+    "location": "N/A - Content Unparsable",
+    "submission_deadline": "N/A - Content Unparsable",
+    "estimated_value": "N/A - Content Unparsable",
+    "contact_info": "N/A - Content Unparsable",
+    "project_area_sqft": "N/A - Content Unparsable",
+    "total_paint_requirement": "N/A - Content Unparsable"
+  },
+  "requirements": {
+    "summary": "The provided RFP data is in raw PDF stream format and could not be parsed to extract meaningful text content. Therefore, no specific details regarding the project, requirements, or line items could be identified.",
+    "technical_specs": [],
+    "quality_standards": [],
+    "delivery_timeline": "N/A - Content Unparsable",
+    "payment_terms": "N/A - Content Unparsable"
+  },
+  "line_items": [],
+  "classification": {
+    "relevance": "Not Relevant - Content Unparsable",
+    "priority_score": 0,
+    "complexity": "Unknown",
+    "recommended_action": "Request readable RFP document (e.g., plain text, accessible PDF, or Word document) for processing."
+  }
+}

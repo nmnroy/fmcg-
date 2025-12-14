@@ -1,0 +1,11 @@
+sku_id,name,category,specs,base_cost,unit
+AP001,Asian Paints Royale Aspira,Interior,"type:premium,finish:matte,coverage:130_sqft_liter,durability:10_years,washable:yes",450.00,liter
+AP002,Asian Paints Royale Luxury,Interior,"type:luxury,finish:satin,coverage:120_sqft_liter,durability:8_years,washable:yes",380.00,liter
+AP003,Asian Paints Royale Atmos,Interior,"type:health,finish:matte,coverage:110_sqft_liter,durability:6_years,air_purifying:yes",520.00,liter
+AP004,Asian Paints Tractor Emulsion,Exterior,"type:economy,finish:matte,coverage:100_sqft_liter,durability:4_years,weather_resistant:yes",180.00,liter
+AP005,Asian Paints Apex Ultima,Exterior,"type:premium,finish:satin,coverage:90_sqft_liter,durability:7_years,weather_resistant:yes",320.00,liter
+AP006,Asian Paints Ace Exterior,Exterior,"type:standard,finish:matte,coverage:85_sqft_liter,durability:3_years,weather_resistant:yes",140.00,liter
+AP007,Asian Paints Apcolite Premium,Interior,"type:economy,finish:matte,coverage:140_sqft_liter,durability:2_years,washable:no",120.00,liter
+AP008,Asian Paints Ultima Protek,Exterior,"type:premium,finish:glossy,coverage:80_sqft_liter,durability:8_years,weather_resistant:yes",380.00,liter
+AP009,Asian Paints HealthShield,Interior,"type:health,finish:matte,coverage:115_sqft_liter,durability:5_years,antibacterial:yes",480.00,liter
+AP010,Asian Paints SmartCare,Interior,"type:waterproof,finish:matte,coverage:100_sqft_liter,durability:6_years,water_resistant:yes",420.00,liter

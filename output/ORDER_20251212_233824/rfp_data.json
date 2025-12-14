@@ -1,0 +1,64 @@
+{
+  "client_name": "DMart",
+  "location": "Hyderabad",
+  "order_date": "13-Dec-2025",
+  "deadline": "",
+  "line_items": [
+    {
+      "id": "1",
+      "description": "Surf Excel Matic Top Load Detergent (2kg Packs)",
+      "item_name": "Surf Excel Matic Top Load Detergent",
+      "specifications": "2kg Packs",
+      "quantity": 1200,
+      "unit": "units",
+      "category_hint": "Detergent, Home Care"
+    },
+    {
+      "id": "2",
+      "description": "Sunsilk Black Shine Shampoo (650ml Large Bottles)",
+      "item_name": "Sunsilk Black Shine Shampoo",
+      "specifications": "650ml Large Bottles",
+      "quantity": 600,
+      "unit": "units",
+      "category_hint": "Shampoo, Hair Care"
+    },
+    {
+      "id": "3",
+      "description": "Dove Hair Fall Rescue Shampoo (Small size preferred, approx 340ml?)",
+      "item_name": "Dove Hair Fall Rescue Shampoo",
+      "specifications": "Small size preferred, approx 340ml",
+      "quantity": 150,
+      "unit": "units",
+      "category_hint": "Shampoo, Hair Care"
+    },
+    {
+      "id": "4",
+      "description": "Vim Dishwash Gel (Large lemon variant)",
+      "item_name": "Vim Dishwash Gel",
+      "specifications": "Large lemon variant",
+      "quantity": 200,
+      "unit": "bottles",
+      "category_hint": "Dishwash Gel, Home Care"
+    },
+    {
+      "id": "5",
+      "description": "Patanjali Dant Kanti Toothpaste (Checking if you distribute this?)",
+      "item_name": "Patanjali Dant Kanti Toothpaste",
+      "specifications": "",
+      "quantity": 100,
+      "unit": "units",
+      "category_hint": "Toothpaste, Oral Care, Personal Care"
+    },
+    {
+      "id": "6",
+      "description": "Head & Shoulders Smooth & Silky",
+      "item_name": "Head & Shoulders Smooth & Silky",
+      "specifications": "",
+      "quantity": 50,
+      "unit": "units",
+      "category_hint": "Shampoo, Hair Care"
+    }
+  ],
+  "is_relevant": true,
+  "priority_score": 80
+}

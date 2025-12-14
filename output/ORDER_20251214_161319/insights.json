@@ -1,0 +1,28 @@
+{
+  "win_probability_pct": 65,
+  "confidence_level": "Medium",
+  "risk_level": "Medium",
+  "risks": [
+    {
+      "type": "commercial",
+      "description": "Short delivery timeline",
+      "severity": "medium",
+      "mitigation": "Pre-book inventory"
+    }
+  ],
+  "competitors": [
+    "Philips",
+    "Prestige",
+    "Havells"
+  ],
+  "strengths": [
+    "Pricing",
+    "Supply Chain",
+    "Product Variety"
+  ],
+  "recommendations": [
+    "Highlight premium product benefits",
+    "Offer competitive warranty terms",
+    "Include free color consultation"
+  ]
+}

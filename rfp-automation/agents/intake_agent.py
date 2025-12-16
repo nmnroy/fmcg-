@@ -27,9 +27,10 @@ class IntakeAgent:
         self.llm = GeminiLLM(model_name=self.model_name)
         logger.info(f"Intake Agent initialized with model: {self.model_name}")
 
-    def process(self, rfp_content: Union[str, Dict[str, Any]]) -> Dict[str, Any]:
-        """Process FMCG Order/RFP content."""
+    async def process_async(self, rfp_content: Union[str, Dict[str, Any]]) -> Dict[str, Any]:
+        """Process FMCG Order/RFP content (Async)."""
         from utils.json_parser import parse_json_output
+        import asyncio
         
         try:
             text_to_process = rfp_content.get("raw_text", str(rfp_content)) if isinstance(rfp_content, dict) else str(rfp_content)
@@ -43,12 +44,17 @@ class IntakeAgent:
             Extract the data according to the System Prompt.
             """
 
-            response = self.llm.generate_content(prompt, system_instruction=RFP_INTAKE_PROMPT)
+            response = await self.llm.generate_content_async(prompt, system_instruction=RFP_INTAKE_PROMPT)
             return parse_json_output(response)
 
         except Exception as e:
             logger.error(f"Intake processing failed: {e}", exc_info=True)
             return {"line_items": [], "error": str(e)}
+
+    def process(self, rfp_content: Union[str, Dict[str, Any]]) -> Dict[str, Any]:
+        """Sync wrapper"""
+        import asyncio
+        return asyncio.run(self.process_async(rfp_content))
 
     def get_agent_info(self) -> Dict[str, Any]:
         return {

@@ -15,11 +15,12 @@ class PricingAgent:
         self.llm = GeminiLLM(model_name=self.model_name)
         logger.info(f"FMCG Pricing Agent initialized with model: {self.model_name}")
     
-    def process(self, rfp_data: Dict[str, Any], sku_data: Dict[str, Any] = None) -> Dict[str, Any]:
+    async def process_async(self, rfp_data: Dict[str, Any], sku_data: Dict[str, Any] = None) -> Dict[str, Any]:
         """
-        Calculates pricing for the matched SKUs in batches.
+        Calculates pricing for the matched SKUs in batches (Async/Parallel).
         """
-        print(f"   [PricingAgent] Calculating Quote (Batched)...")
+        import asyncio
+        print(f"   [PricingAgent] Calculating Quote (Batched/Async)...")
 
         matches = sku_data.get('matches', []) if sku_data else []
         if not matches and rfp_data and rfp_data.get('line_items'):
@@ -32,77 +33,16 @@ class PricingAgent:
                  })
 
         all_pricing_rows = []
-        
-        # BATCH PROCESSING (10 items per batch)
         batch_size = 10
+        tasks = []
+        
         for i in range(0, len(matches), batch_size):
             batch = matches[i:i+batch_size]
-            items_context = ""
+            tasks.append(self._process_batch_async(batch))
             
-            for item in batch:
-                name = item.get('matched_sku_name')
-                if not name: name = item.get('original_desc', 'Unknown')
-                code = item.get('matched_sku_code', 'N/A')
-                # Try to get quantity or default
-                qty = item.get('quantity')
-                if not qty: qty = 10
-                
-                items_context += f"- SKU: {code} | Name: {name} | Qty: {qty}\n"
-
-            prompt = f"""You are the FMCG Pricing Agent.
-            
-            INPUT BATCH:
-            {items_context}
-            
-            Calculate the Invoice for these items using the PRICING LOGIC.
-            Return ONLY a JSON Array of objects. Do not wrap in a 'pricing_table' key.
-            Example:
-            [
-              {{ "sku_name": "...", "qty": 10, "unit_price_base": 100, "net_unit_price": 95, "line_total_price": 950 }}
-            ]
-            """
-            try:
-                print(f"   [DEBUG] Sending batch of {len(batch)} items to Pricing Model...")
-                response_text = self.llm.generate_content(prompt, system_instruction=PRICING_PROMPT)
-                print(f"   [DEBUG] Raw Pricing Response: {response_text[:100]}...")
-                parsed = parse_json_output(response_text)
-                
-                if isinstance(parsed, list):
-                    all_pricing_rows.extend(parsed)
-                    print(f"   [DEBUG] Parsed {len(parsed)} rows (List)")
-                elif isinstance(parsed, dict):
-                    # Check for specific keys or use the first list found
-                    if "pricing_table" in parsed:
-                        all_pricing_rows.extend(parsed["pricing_table"])
-                        print(f"   [DEBUG] Parsed {len(parsed['pricing_table'])} rows (pricing_table)")
-                    elif "items" in parsed: 
-                        all_pricing_rows.extend(parsed["items"])
-                        print(f"   [DEBUG] Parsed {len(parsed['items'])} rows (items)")
-                    else:
-                        # Try to find ANY list in the dict
-                        found_list = False
-                        for k, v in parsed.items():
-                            if isinstance(v, list):
-                                all_pricing_rows.extend(v)
-                                print(f"   [DEBUG] Parsed {len(v)} rows (found in key '{k}')")
-                                found_list = True
-                                break
-                        
-                        if not found_list:
-                            # Maybe the dict IS the row?
-                            if "sku_name" in parsed or "unit_price" in parsed:
-                                all_pricing_rows.append(parsed)
-                                print(f"   [DEBUG] Parsed 1 row (Dict itself)")
-                            else:
-                                logger.warning(f"Could not extract rows from dict: {parsed.keys()}")
-                                print(f"   [DEBUG] FAILED to parse dict keys: {parsed.keys()}")
-                else:
-                    logger.warning(f"Unexpected pricing format: {type(parsed)}")
-                    print(f"   [DEBUG] FAILED to parse pricing. Type: {type(parsed)}")
-                    
-            except Exception as e:
-                logger.error(f"Pricing batch failed: {e}")
-                print(f"   [DEBUG] EXCEPTION in Pricing Batch: {e}")
+        results = await asyncio.gather(*tasks)
+        for r in results:
+            all_pricing_rows.extend(r)
         
         # Recalculate Totals Locally
         grand_subtotal = 0.0
@@ -122,3 +62,59 @@ class PricingAgent:
                 "overall_margin_pct": 20  # Simulated margin for insights
             }
         }
+        
+    def process(self, rfp_data: Dict[str, Any], sku_data: Dict[str, Any] = None) -> Dict[str, Any]:
+        """Sync wrapper"""
+        import asyncio
+        return asyncio.run(self.process_async(rfp_data, sku_data))
+
+    async def _process_batch_async(self, batch: list) -> list:
+        rows = []
+        items_context = ""
+        
+        for item in batch:
+            name = item.get('matched_sku_name')
+            if not name: name = item.get('original_desc', 'Unknown')
+            code = item.get('matched_sku_code', 'N/A')
+            qty = item.get('quantity')
+            if not qty: qty = 10
+            
+            items_context += f"- SKU: {code} | Name: {name} | Qty: {qty}\n"
+
+        prompt = f"""You are the FMCG Pricing Agent.
+        
+        INPUT BATCH:
+        {items_context}
+        
+        Calculate the Invoice for these items using the PRICING LOGIC.
+        Return ONLY a JSON Array of objects. Do not wrap in a 'pricing_table' key.
+        Example:
+        [
+          {{ "sku_name": "...", "qty": 10, "unit_price_base": 100, "net_unit_price": 95, "line_total_price": 950 }}
+        ]
+        """
+        try:
+            # print(f"   [DEBUG] Sending batch of {len(batch)} items to Pricing Model...")
+            response_text = await self.llm.generate_content_async(prompt, system_instruction=PRICING_PROMPT)
+            parsed = parse_json_output(response_text)
+            
+            if isinstance(parsed, list):
+                rows.extend(parsed)
+            elif isinstance(parsed, dict):
+                if "pricing_table" in parsed:
+                    rows.extend(parsed["pricing_table"])
+                elif "items" in parsed: 
+                    rows.extend(parsed["items"])
+                else:
+                    # heuristic extract
+                    for k, v in parsed.items():
+                        if isinstance(v, list):
+                            rows.extend(v)
+                            break
+                    if not rows and ("sku_name" in parsed or "unit_price" in parsed):
+                        rows.append(parsed)
+            
+        except Exception as e:
+            logger.error(f"Pricing batch failed: {e}")
+            
+        return rows

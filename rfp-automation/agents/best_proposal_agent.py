@@ -16,9 +16,10 @@ class BestProposalAgent:
         self.llm = GeminiLLM(model_name=self.model_name)
         logger.info(f"Best Proposal Agent initialized with model: {self.model_name}")
     
-    def process(self, rfp_data: Dict[str, Any], pricing_data: Dict[str, Any], insights_data: Dict[str, Any]) -> Dict[str, Any]:
-        """Generate a professional FMCG proposal in markdown format"""
+    async def process_async(self, rfp_data: Dict[str, Any], pricing_data: Dict[str, Any], insights_data: Dict[str, Any]) -> Dict[str, Any]:
+        """Generate a professional FMCG proposal in markdown format (Async)"""
         from prompts.agent_prompts import PROPOSAL_PROMPT
+        import asyncio
         
         try:
             client_name = rfp_data.get('client_name', 'Valued Client')
@@ -33,7 +34,7 @@ class BestProposalAgent:
             Use the PROPOSAL_PROMPT structure.
             """
 
-            response = self.llm.generate_content(prompt, system_instruction=PROPOSAL_PROMPT)
+            response = await self.llm.generate_content_async(prompt, system_instruction=PROPOSAL_PROMPT)
             
             # Clean response text
             proposal_text = response.strip()
@@ -49,6 +50,11 @@ class BestProposalAgent:
         except Exception as e:
             logger.error(f"Error generating proposal: {str(e)}")
             return {"content": self._generate_fallback_proposal(rfp_data, pricing_data)}
+
+    def process(self, rfp_data: Dict[str, Any], pricing_data: Dict[str, Any], insights_data: Dict[str, Any]) -> Dict[str, Any]:
+        """Sync wrapper"""
+        import asyncio
+        return asyncio.run(self.process_async(rfp_data, pricing_data, insights_data))
     
     def _generate_fallback_proposal(self, rfp_data: Dict[str, Any], pricing_data: Dict[str, Any]) -> str:
         """Generate a fallback proposal for FMCG"""

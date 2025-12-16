@@ -35,10 +35,10 @@ class SalesInsightsAgent:
         self.prompt = ChatPromptTemplate.from_template(SALES_INSIGHTS_PROMPT)
         logger.info(f"Sales Insights Agent initialized with model: {self.model_name}")
 
-    def process(self, rfp_text: str, rfp_data: dict, customer_data: dict = None, pricing_data: dict = None) -> dict:
-        """Analyze win probability - bulletproof version"""
-        
-        print("🔍 Insights Agent: Starting analysis...")
+    async def process_async(self, rfp_text: str, rfp_data: dict, customer_data: dict = None, pricing_data: dict = None) -> dict:
+        """Analyze win probability - bulletproof version (Async)"""
+        import asyncio
+        print("🔍 Insights Agent: Starting analysis (Async)...")
         
         # Default response (returned on any error)
         default_response = {
@@ -104,9 +104,9 @@ Return ONLY this JSON structure:
 
 Return ONLY valid JSON, no explanations or markdown."""
 
-            print("   Calling API...")
-            response = self.llm.generate(prompt, temperature=0.3, max_tokens=4000)
-            print(f"   API response received: {len(response)} chars")
+            # print("   Calling API...")
+            response = await self.llm.generate_async(prompt, temperature=0.3, max_tokens=4000)
+            # print(f"   API response received: {len(response)} chars")
             
             # Clean response aggressively
             response = response.strip()
@@ -121,11 +121,11 @@ Return ONLY valid JSON, no explanations or markdown."""
             response = response.strip()
             response = response.replace("```json", "").replace("```", "")
             
-            print(f"   Cleaned response: {response[:100]}...")
+            # print(f"   Cleaned response: {response[:100]}...")
             
             # Parse JSON
             result = json.loads(response)
-            print("   ✅ JSON parsed successfully")
+            # print("   ✅ JSON parsed successfully")
             
             # Validate win_probability_pct
             win_prob = result.get('win_probability_pct', 65)
@@ -147,19 +147,24 @@ Return ONLY valid JSON, no explanations or markdown."""
             if 'competitors' not in result:
                 result['competitors'] = default_response['competitors']
             
-            print(f"   ✅ Insights complete: {result['win_probability_pct']}% win probability")
+            # print(f"   ✅ Insights complete: {result['win_probability_pct']}% win probability")
             return result
             
         except json.JSONDecodeError as e:
             print(f"   ❌ JSON parsing failed: {e}")
-            print(f"   Response was: {response[:200] if 'response' in locals() else 'No response'}")
+            # print(f"   Response was: {response[:200] if 'response' in locals() else 'No response'}")
             return default_response
             
         except Exception as e:
             print(f"   ❌ Insights agent error: {e}")
-            import traceback
-            traceback.print_exc()
+            # import traceback
+            # traceback.print_exc()
             return default_response
+            
+    def process(self, rfp_text: str, rfp_data: dict, customer_data: dict = None, pricing_data: dict = None) -> dict:
+        """Sync wrapper"""
+        import asyncio
+        return asyncio.run(self.process_async(rfp_text, rfp_data, customer_data, pricing_data))
 
     def _compute_technical_compliance(self, sku_matches: Dict[str, Any]) -> float:
         try:

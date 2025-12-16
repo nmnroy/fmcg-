@@ -15,7 +15,7 @@ import logging
 import os
 from typing import Dict, Any, List
 from datetime import datetime
-from langchain_core.prompts import ChatPromptTemplate
+# from langchain_core.prompts import ChatPromptTemplate
 
 from prompts.agent_prompts import SALES_INSIGHTS_PROMPT
 from utils.gemini_wrapper import GeminiLLM
@@ -32,7 +32,7 @@ class SalesInsightsAgent:
         self.model_name = model_name or os.getenv("GOOGLE_MODEL", "gemini-2.5-flash")
         self.temperature = temperature
         self.llm = GeminiLLM(model_name=self.model_name)
-        self.prompt = ChatPromptTemplate.from_template(SALES_INSIGHTS_PROMPT)
+        # self.prompt = ChatPromptTemplate.from_template(SALES_INSIGHTS_PROMPT) - REMOVED for dependency fix
         logger.info(f"Sales Insights Agent initialized with model: {self.model_name}")
 
     async def process_async(self, rfp_text: str, rfp_data: dict, customer_data: dict = None, pricing_data: dict = None) -> dict:

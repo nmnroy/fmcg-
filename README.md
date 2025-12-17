@@ -2,7 +2,7 @@
 
 **Intelligent RFP Automation** is a tool designed to automate and streamline the process of generating Requests for Proposal (RFPs) for FMCG orders. This solution leverages Python, Streamlit, and smart parsing logic to extract key information from order files and automatically produce structured RFP documents. 🚀
 
-📎 **Live App:** https://afpjlqseftuspf4yutno4z.streamlit.app/  
+📎 **Live App:** https://fmcgagenticai.streamlit.app/  
 🎬 **Demo Video:** https://drive.google.com/drive/folders/1uK4Kx7LA3BpVCvavCjc1nMCvc8VS8fNX?usp=sharing
 
 ---

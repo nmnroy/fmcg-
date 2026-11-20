@@ -188,6 +188,34 @@ with col2:
     st.markdown("### 📝 Quick Paste")
     rfp_text_input = st.text_area("Paste text", value=st.session_state['rfp_input_content'], height=100, label_visibility="collapsed")
 
+# --- BATCH UPLOAD EXPANDER ---
+with st.expander("📦 Batch Processing Mode (Process Multiple Orders Simultaneously)"):
+    st.caption("Upload multiple retailer orders or RFP RFQs to analyze and compare deal economics side-by-side.")
+    batch_files = st.file_uploader("Select Multiple Orders", type=["pdf", "txt"], accept_multiple_files=True, key="batch_uploader")
+    if batch_files and st.button("⚡ Run Batch Multi-Order Analysis", use_container_width=True):
+        batch_results = []
+        batch_prog = st.progress(0, text="Starting batch analysis...")
+        for b_idx, bf in enumerate(batch_files):
+            os.makedirs("data/rfp_uploads", exist_ok=True)
+            b_path = f"data/rfp_uploads/batch_{bf.name}"
+            with open(b_path, "wb") as f:
+                f.write(bf.read())
+            b_res = process_rfp(b_path, simulation_mode=st.session_state.get('offline_simulation', False))
+            pricing_s = b_res.get('pricing', {}).get('summary', {})
+            batch_results.append({
+                "Filename": bf.name,
+                "Client": b_res.get('rfp_data', {}).get('client_name', 'Retail Client'),
+                "SKUs": len(b_res.get('rfp_data', {}).get('line_items', [])),
+                "Total Value": format_currency(pricing_s.get('grand_total', 0), selected_currency),
+                "Margin": f"{pricing_s.get('overall_margin_pct', 18)}%",
+                "Win Prob": f"{b_res.get('insights', {}).get('win_probability_pct', 70)}%",
+                "Risk": b_res.get('insights', {}).get('risk_level', 'Low')
+            })
+            batch_prog.progress(int((b_idx + 1) / len(batch_files) * 100), text=f"Processed {bf.name}")
+        batch_prog.empty()
+        st.success(f"Batch analysis complete for {len(batch_files)} orders!")
+        st.dataframe(batch_results, use_container_width=True)
+
 if st.button("🚀 Process RFP", use_container_width=True):
     if uploaded_file or rfp_text_input:
         with st.spinner("Processing..."):

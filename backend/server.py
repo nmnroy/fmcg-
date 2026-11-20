@@ -28,7 +28,8 @@ from utils.compliance_checker import validate_order_compliance
 from models import (
     ChatRequest, CatalogItem, CatalogResponse,
     PricingSimulationRequest, PricingSimulationResponse,
-    ProcessTextRequest, AnalyticsSummary
+    ProcessTextRequest, AnalyticsSummary,
+    ComplianceValidationRequest, ComplianceValidationResponse
 )
 
 logging.basicConfig(level=logging.INFO)
@@ -141,6 +142,21 @@ def get_catalog_item(sku_id: str):
         if item["sku_id"].lower() == sku_id.lower():
             return CatalogItem(**item)
     raise HTTPException(status_code=404, detail="SKU ID not found in catalog")
+
+# --- Compliance Validation Endpoint ---
+@app.post("/api/compliance/validate", response_model=ComplianceValidationResponse)
+def validate_compliance_endpoint(req: ComplianceValidationRequest):
+    """Validate FMCG purchase order compliance, MOQs, and cold chain rules"""
+    rfp_data = {
+        "client_name": req.client_name,
+        "deadline": req.deadline
+    }
+    pricing_data = {
+        "pricing_table": req.pricing_table,
+        "summary": {"grand_total": req.grand_total}
+    }
+    res = validate_order_compliance(rfp_data, pricing_data)
+    return ComplianceValidationResponse(**res)
 
 # --- Pricing Simulation Endpoint ---
 @app.post("/api/pricing/simulate", response_model=PricingSimulationResponse)

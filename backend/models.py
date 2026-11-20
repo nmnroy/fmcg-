@@ -64,3 +64,18 @@ class ProcessTextRequest(BaseModel):
     text: str = Field(..., description="Raw RFP text / order content")
     client_name: Optional[str] = "Retail Partner"
     simulation_mode: bool = False
+
+
+class ComplianceValidationRequest(BaseModel):
+    client_name: Optional[str] = "Retail Client"
+    deadline: Optional[str] = "Standard 5 days"
+    pricing_table: List[Dict[str, Any]] = []
+    grand_total: float = 0.0
+
+
+class ComplianceValidationResponse(BaseModel):
+    is_compliant: bool
+    compliance_score: int
+    violations: List[str]
+    warnings: List[str]
+    special_handling_tags: List[str]

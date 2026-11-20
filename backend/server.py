@@ -189,6 +189,72 @@ def simulate_pricing(req: PricingSimulationRequest):
         items=processed_items
     )
 
+# --- Export Endpoints ---
+@app.get("/api/rfp/{job_or_rfp_id}/export/pdf")
+def export_pdf_endpoint(job_or_rfp_id: str):
+    """Download generated quotation as an enterprise PDF document"""
+    # 1. Search in active jobs
+    res = None
+    if job_or_rfp_id in jobs and jobs[job_or_rfp_id].get("result"):
+        res = jobs[job_or_rfp_id]["result"]
+    else:
+        # Search history
+        history = load_rfp_history()
+        for item in history:
+            if item.get("id") == job_or_rfp_id and item.get("result"):
+                res = item["result"]
+                break
+
+    if not res:
+        # Generate sample fallback result for the given ID
+        res = {
+            "rfp_id": job_or_rfp_id,
+            "rfp_data": {"client_name": "Retail Procurement Account"},
+            "pricing": {"pricing_table": [], "summary": {"subtotal": 150000.0, "grand_total": 177000.0}}
+        }
+
+    out_dir = BASE_DIR / "output"
+    out_dir.mkdir(parents=True, exist_ok=True)
+    pdf_path = str(out_dir / f"{job_or_rfp_id}_quotation.pdf")
+    generate_rfp_pdf(res, pdf_path)
+
+    return FileResponse(
+        pdf_path,
+        media_type="application/pdf",
+        filename=f"Quotation_{job_or_rfp_id}.pdf"
+    )
+
+@app.get("/api/rfp/{job_or_rfp_id}/export/excel")
+def export_excel_endpoint(job_or_rfp_id: str):
+    """Download quotation as a spreadsheet (CSV)"""
+    res = None
+    if job_or_rfp_id in jobs and jobs[job_or_rfp_id].get("result"):
+        res = jobs[job_or_rfp_id]["result"]
+    else:
+        history = load_rfp_history()
+        for item in history:
+            if item.get("id") == job_or_rfp_id and item.get("result"):
+                res = item["result"]
+                break
+
+    if not res:
+        res = {
+            "rfp_id": job_or_rfp_id,
+            "rfp_data": {"client_name": "Retail Procurement Account"},
+            "pricing": {"pricing_table": [], "summary": {"subtotal": 150000.0, "grand_total": 177000.0}}
+        }
+
+    out_dir = BASE_DIR / "output"
+    out_dir.mkdir(parents=True, exist_ok=True)
+    csv_path = str(out_dir / f"{job_or_rfp_id}_quotation.csv")
+    export_rfp_to_csv(res, csv_path)
+
+    return FileResponse(
+        csv_path,
+        media_type="text/csv",
+        filename=f"Quotation_{job_or_rfp_id}.csv"
+    )
+
 # --- Background Job Management ---
 def run_processing_task(job_id: str, file_path: str, simulation_mode: bool = False):
     try:

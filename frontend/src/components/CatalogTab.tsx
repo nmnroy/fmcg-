@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Search, Tag, CheckCircle2, PackageCheck, Layers } from 'lucide-react';
-import { fetchCatalog, CatalogItem } from '../lib/api';
+import { fetchCatalog, type CatalogItem } from '../lib/api';
 
 const DEFAULT_CATEGORIES = [
     'All',
@@ -97,8 +97,11 @@ export default function CatalogTab() {
             </div>
 
             {/* Products Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {items.map((sku) => (
+            {loading ? (
+                <div className="py-12 text-center text-gray-400">Loading catalog items...</div>
+            ) : (
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    {items.map((sku) => (
                     <div
                         key={sku.sku_id}
                         className="bg-surface p-5 rounded-lg border border-gray-800 hover:border-gray-700 transition-all flex flex-col justify-between"
@@ -144,7 +147,8 @@ export default function CatalogTab() {
                         </div>
                     </div>
                 ))}
-            </div>
+                </div>
+            )}
         </div>
     );
 }

@@ -13,7 +13,7 @@ import {
     Cell
 } from 'recharts';
 import { TrendingUp, DollarSign, Award, Clock, ShoppingCart, RefreshCw } from 'lucide-react';
-import { fetchAnalytics, AnalyticsData } from '../lib/api';
+import { fetchAnalytics, type AnalyticsData } from '../lib/api';
 
 const COLORS = ['#3b82f6', '#10b981', '#f59e0b', '#ec4899', '#8b5cf6', '#06b6d4'];
 
@@ -151,7 +151,7 @@ export default function AnalyticsTab() {
                                     cx="50%"
                                     cy="50%"
                                     outerRadius={80}
-                                    label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
+                                    label={({ name, percent }: { name?: string; percent?: number }) => `${name ?? ''} ${(((percent ?? 0) * 100)).toFixed(0)}%`}
                                 >
                                     {catData.map((_, index) => (
                                         <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />

@@ -41,7 +41,7 @@ export default function ChatTab({ contextData }: ChatTabProps) {
 
             const response = await sendChatMessage(userMsg.content, contextStr);
             setMessages(prev => [...prev, { role: 'assistant', content: response }]);
-        } catch (e) {
+        } catch {
             setMessages(prev => [...prev, { role: 'assistant', content: "Sorry, I encountered an error connecting to the agent." }]);
         } finally {
             setLoading(false);

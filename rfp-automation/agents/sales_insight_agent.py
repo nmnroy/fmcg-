@@ -109,11 +109,6 @@ Return ONLY this JSON structure:
 }}
 
 Return ONLY valid JSON, no explanations or markdown."""
-    "strengths": ["Pricing", "Supply Chain", "Product Variety"],
-    "recommendations": ["rec 1", "rec 2"]
-}}
-
-Return ONLY valid JSON, no explanations or markdown."""
 
             # print("   Calling API...")
             response = await self.llm.generate_async(prompt, temperature=0.3, max_tokens=4000)

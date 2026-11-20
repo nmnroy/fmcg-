@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { TrendingDown, PieChart as PieIcon, BarChart as BarChartIcon } from 'lucide-react';
 import {
     BarChart,
@@ -20,31 +20,32 @@ interface PricingTabProps {
 
 export default function PricingTab({ data }: PricingTabProps) {
     const [margin, setMargin] = useState(20);
-    const p_table = data.pricing_table || [];
-    const backendSummary = data.summary || {};
+    const backendSummary = data?.summary || {};
 
-    // Calculate Dynamics
-    let runningSubtotal = 0;
-    let totalBaseCost = 0;
+    // Calculate Dynamics with memoization
+    const { processedItems, totalBaseCost, runningSubtotal } = useMemo(() => {
+        const table = data?.pricing_table || [];
+        let baseCost = 0;
+        let subtotal = 0;
+        const items = [];
 
-    const processedItems = p_table.map((item: any) => {
-        const base = item.net_unit_price || 0;
-        const qty = item.qty || 0;
+        for (const item of table) {
+            const base = item.net_unit_price || 0;
+            const qty = item.qty || 0;
+            baseCost += base * qty;
 
-        // Base Cost Total
-        totalBaseCost += base * qty;
+            let sellPrice = base;
+            if (margin < 100) {
+                sellPrice = base / (1 - margin / 100);
+            }
+            const lineTotal = sellPrice * qty;
+            subtotal += lineTotal;
 
-        // Sell Price Calculation
-        // Base / (1 - Margin%)
-        let sellPrice = base;
-        if (margin < 100) {
-            sellPrice = base / (1 - margin / 100);
+            items.push({ ...item, sellPrice, lineTotal });
         }
-        const lineTotal = sellPrice * qty;
-        runningSubtotal += lineTotal;
 
-        return { ...item, sellPrice, lineTotal };
-    });
+        return { processedItems: items, totalBaseCost: baseCost, runningSubtotal: subtotal };
+    }, [data, margin]);
 
     const gstRate = 0.18;
     const gstAmount = runningSubtotal * gstRate;

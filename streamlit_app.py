@@ -60,6 +60,33 @@ with st.sidebar:
     st.markdown("### ⚙️ Settings")
     st.session_state.theme = st.radio("Theme Mode", ["Dark", "Light"], horizontal=True)
     selected_currency = st.selectbox("Currency Display", list(CURRENCY_RATES.keys()), index=0)
+    
+    st.markdown("### 🧪 Execution Mode")
+    simulation_toggle = st.toggle("Offline Simulation Mode", value=False, help="Runs deterministic FMCG pipeline instantly without requiring Gemini API quota.")
+    st.session_state['offline_simulation'] = simulation_toggle
+    if simulation_toggle:
+        st.caption("⚡ Offline Simulation active. Zero external API calls will be made.")
+        
+    st.markdown("### 📋 Load Sample Orders")
+    if st.button("🛒 Supermarket Restock", use_container_width=True):
+        sample_path = "data/sample_supermarket_monthly_restock.txt"
+        if os.path.exists(sample_path):
+            with open(sample_path, "r", encoding="utf-8") as f:
+                st.session_state['rfp_input_content'] = f.read()
+            st.rerun()
+    if st.button("⚡ Quick-Commerce Flash", use_container_width=True):
+        sample_path = "data/sample_quick_commerce_express_order.txt"
+        if os.path.exists(sample_path):
+            with open(sample_path, "r", encoding="utf-8") as f:
+                st.session_state['rfp_input_content'] = f.read()
+            st.rerun()
+    if st.button("🏨 Hotel Amenities RFP", use_container_width=True):
+        sample_path = "data/sample_hotel_amenities_rfp.txt"
+        if os.path.exists(sample_path):
+            with open(sample_path, "r", encoding="utf-8") as f:
+                st.session_state['rfp_input_content'] = f.read()
+            st.rerun()
+
     st.markdown("---")
 
 # --- DYNAMIC CSS ---
@@ -239,7 +266,11 @@ if st.button("🚀 Process RFP", use_container_width=True):
                 progress_bar.progress(pct, text=f"Processing: {stage}")
 
             # Process with callback
-            result = process_rfp(path, progress_callback=update_streamlit_progress)
+            result = process_rfp(
+                path,
+                simulation_mode=st.session_state.get('offline_simulation', False),
+                progress_callback=update_streamlit_progress
+            )
             
             # Complete
             progress_bar.progress(100, text="Completed!")

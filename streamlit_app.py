@@ -9,12 +9,16 @@ from datetime import datetime
 # Add rfp-automation directory to Python path
 sys.path.append(os.path.join(os.path.dirname(__file__), 'rfp-automation'))
 
+import io
+
 try:
     from main import process_rfp
     from utils.gemini_wrapper import GeminiLLM
+    from utils.pdf_generator import generate_rfp_pdf
+    from utils.excel_exporter import export_rfp_to_csv
 except ImportError:
     # Dummy mock for dev
-    def process_rfp(path):
+    def process_rfp(path, **kwargs):
         return {}
 
 # --- PAGE CONFIGURATION ---
@@ -419,6 +423,36 @@ if st.session_state.current_rfp_result:
                 st.metric("Final Quote Amount", f"₹{final_total:,.2f}")
                 if backend_discount > 0:
                     st.success(f"📉 Includes Volume Savings of ₹{backend_discount:,.2f} ({savings_pct:.1f}%)")
+
+            st.markdown("---")
+            st.markdown("### 📥 Export & Download Quotation")
+            exp1, exp2 = st.columns(2)
+            with exp1:
+                try:
+                    pdf_buf = io.BytesIO()
+                    generate_rfp_pdf(res, pdf_buf)
+                    st.download_button(
+                        label="📄 Download Official PDF Quote",
+                        data=pdf_buf.getvalue(),
+                        file_name=f"{res.get('rfp_id', 'FMCG_Quote')}.pdf",
+                        mime="application/pdf",
+                        use_container_width=True
+                    )
+                except Exception as e:
+                    st.caption(f"PDF export unavailable: {e}")
+
+            with exp2:
+                try:
+                    csv_buf = export_rfp_to_csv(res, io.BytesIO())
+                    st.download_button(
+                        label="📊 Export Spreadsheet (CSV / Excel)",
+                        data=csv_buf.getvalue(),
+                        file_name=f"{res.get('rfp_id', 'FMCG_Quote')}.csv",
+                        mime="text/csv",
+                        use_container_width=True
+                    )
+                except Exception as e:
+                    st.caption(f"CSV export unavailable: {e}")
 
         else:
             st.info("Pricing not generated.")

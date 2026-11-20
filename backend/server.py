@@ -8,10 +8,18 @@ import logging
 from pathlib import Path
 from typing import Optional, List, Dict, Any
 
-from fastapi import FastAPI, UploadFile, File, HTTPException, BackgroundTasks, Query
+from fastapi import FastAPI, HTTPException, BackgroundTasks, Query, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import RedirectResponse, FileResponse, Response
 import uvicorn
+
+try:
+    from fastapi import UploadFile, File
+    from fastapi.dependencies.utils import ensure_multipart_is_installed
+    ensure_multipart_is_installed()
+    MULTIPART_AVAILABLE = True
+except Exception:
+    MULTIPART_AVAILABLE = False
 
 # Setup paths
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -391,37 +399,42 @@ def run_processing_task(job_id: str, file_path: str, simulation_mode: bool = Fal
         jobs[job_id]["status"] = "failed"
         jobs[job_id]["error"] = str(e)
 
-@app.post("/api/process")
-async def process_rfp_endpoint(
-    background_tasks: BackgroundTasks,
-    file: UploadFile = File(...),
-    simulation_mode: bool = Query(False, description="Use offline simulation mode")
-):
-    """Upload and start processing an RFP file in the background"""
-    try:
-        logger.info(f"Processing file: {file.filename} (Sim: {simulation_mode})")
-        upload_dir = BASE_DIR / "data" / "uploads"
-        upload_dir.mkdir(parents=True, exist_ok=True)
-        file_path = upload_dir / file.filename
+if MULTIPART_AVAILABLE:
+    @app.post("/api/process")
+    async def process_rfp_endpoint(
+        background_tasks: BackgroundTasks,
+        file: UploadFile = File(...),
+        simulation_mode: bool = Query(False, description="Use offline simulation mode")
+    ):
+        """Upload and start processing an RFP file in the background"""
+        try:
+            logger.info(f"Processing file: {file.filename} (Sim: {simulation_mode})")
+            upload_dir = BASE_DIR / "data" / "uploads"
+            upload_dir.mkdir(parents=True, exist_ok=True)
+            file_path = upload_dir / file.filename
 
-        with open(file_path, "wb") as buffer:
-            shutil.copyfileobj(file.file, buffer)
+            with open(file_path, "wb") as buffer:
+                shutil.copyfileobj(file.file, buffer)
 
-        job_id = str(uuid.uuid4())
-        jobs[job_id] = {
-            "job_id": job_id,
-            "status": "pending",
-            "progress": 0,
-            "stage": "File received",
-            "result": None
-        }
+            job_id = str(uuid.uuid4())
+            jobs[job_id] = {
+                "job_id": job_id,
+                "status": "pending",
+                "progress": 0,
+                "stage": "File received",
+                "result": None
+            }
 
-        background_tasks.add_task(run_processing_task, job_id, str(file_path), simulation_mode)
-        return {"job_id": job_id, "message": "Processing started", "simulation_mode": simulation_mode}
+            background_tasks.add_task(run_processing_task, job_id, str(file_path), simulation_mode)
+            return {"job_id": job_id, "message": "Processing started", "simulation_mode": simulation_mode}
 
-    except Exception as e:
-        logger.error(f"Error processing RFP: {e}")
-        raise HTTPException(status_code=500, detail=str(e))
+        except Exception as e:
+            logger.error(f"Error processing RFP: {e}")
+            raise HTTPException(status_code=500, detail=str(e))
+else:
+    @app.post("/api/process")
+    async def process_rfp_endpoint_fallback(background_tasks: BackgroundTasks, request: Request):
+        return {"error": "python-multipart not installed. Please use /api/process-text for JSON payloads."}
 
 @app.post("/api/process-text")
 async def process_text_endpoint(background_tasks: BackgroundTasks, req: ProcessTextRequest):

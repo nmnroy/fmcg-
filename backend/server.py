@@ -189,6 +189,45 @@ def simulate_pricing(req: PricingSimulationRequest):
         items=processed_items
     )
 
+# --- History Management Endpoints ---
+@app.get("/api/history")
+def get_history(
+    limit: int = Query(20, ge=1, le=100),
+    q: Optional[str] = Query(None, description="Search by client or filename")
+):
+    """Retrieve processed RFP order history with search and pagination"""
+    history = load_rfp_history()
+    if q:
+        query = q.lower()
+        history = [
+            h for h in history
+            if query in str(h.get("filename", "")).lower() or
+               query in str(h.get("id", "")).lower() or
+               query in str(h.get("result", {}).get("rfp_data", {}).get("client_name", "")).lower()
+        ]
+    return {"total": len(history), "items": history[:limit]}
+
+@app.get("/api/history/{rfp_id}")
+def get_history_detail(rfp_id: str):
+    """Retrieve full details of a specific historical RFP"""
+    history = load_rfp_history()
+    for item in history:
+        if str(item.get("id")) == rfp_id:
+            return item
+    raise HTTPException(status_code=404, detail="RFP not found in history")
+
+@app.delete("/api/history/{rfp_id}")
+def delete_history_item(rfp_id: str):
+    """Remove an RFP entry from history"""
+    h_file = get_history_file()
+    history = load_rfp_history()
+    new_history = [h for h in history if str(h.get("id")) != rfp_id]
+    if len(new_history) == len(history):
+        raise HTTPException(status_code=404, detail="RFP not found in history")
+    with open(h_file, "w", encoding="utf-8") as f:
+        json.dump(new_history, f, indent=2)
+    return {"message": f"RFP {rfp_id} successfully deleted from history"}
+
 # --- Export Endpoints ---
 @app.get("/api/rfp/{job_or_rfp_id}/export/pdf")
 def export_pdf_endpoint(job_or_rfp_id: str):

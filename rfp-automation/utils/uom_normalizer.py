@@ -89,11 +89,11 @@ def normalize_quantity(raw_qty: Any, raw_unit: str = "", description: str = "") 
         pattern = r"\b" + re.escape(pack_word) + r"\b"
         if re.search(pattern, unit_str):
             multiplier = mult
-            detected_package = pack_word
+            detected_package = pack_word.rstrip("s") if pack_word.endswith("s") and pack_word not in ("gross", "pcs") else pack_word
             break
         elif mult > 1 and re.search(pattern, desc_str):
             multiplier = mult
-            detected_package = pack_word
+            detected_package = pack_word.rstrip("s") if pack_word.endswith("s") and pack_word not in ("gross", "pcs") else pack_word
             break
 
     # Look for explicit multipliers like "case of 24", "pack of 6", "12x100g"

@@ -1,137 +1,46 @@
-from reportlab.lib.pagesizes import letter
-
-from reportlab.pdfgen import canvas
-
-from reportlab.lib import colors
-
-from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
-
-from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer
-import os
-
-def create_pdf(filename, content):
-
-    doc = SimpleDocTemplate(filename, pagesize=letter)
-
-    styles = getSampleStyleSheet()
-
-    story = []
-
-
-    # Custom styles
-
-    title_style = styles['Title']
-
-    heading_style = styles['Heading2']
-    normal_style = styles['Normal']
-
-
-    # content is expected to be simple markdown-like text
-
-    lines = content.split('\n')
-    
-
-    for line in lines:
-
-        line = line.strip()
-
-        if not line:
-
-            story.append(Spacer(1, 12))
-            continue
-            
-
-        if line.startswith('**') and line.endswith('**'):
-
-            # Bold heading
-
-            text = line.replace('**', '')
-
-            story.append(Paragraph(text, heading_style))
-
-        elif line.startswith('- '):
-
-            # Bullet point
-
-            text = line[2:]
-
-            story.append(Paragraph(f"• {text}", normal_style))
-
-        elif ':' in line and line.split(':')[0].isupper():
-
-             # Uppercase keys like "CLIENT:"
-
-             story.append(Paragraph(f"<b>{line}</b>", normal_style))
-
-        else:
-
-            story.append(Paragraph(line, normal_style))
-
-
-    doc.build(story)
-
-    print(f"PDF created: {filename}")
-
-
-content = """**REQUEST FOR PROPOSAL - FMCG SUPPLY CONTRACT**
-
-**RFP Reference:** SKU-2025-RETAIL-088
-
-**Date:** December 14, 2025
-
-**Client:** Future Retail Group (BigBasket / BlinkIt)
-
-
-**1. Executive Summary**
-
-We are looking to secure a bulk supply contract for personal care and home hygiene products for our Q1 2026 inventory.
-
-
-**2. Product Requirements**
-
-Please provide your best distributor pricing for the following:
-
-
-**A. Hair Care**
-
-- Sunsilk Black Shine Shampoo (180ml) - 500 cases
-
-- Dove Intense Repair Shampoo (650ml) - 200 cases
-
-- Tresemme Keratin Smooth (340ml) - 300 cases
-
-
-**B. Skin Care**
-
-- Pond's White Beauty Face Wash (100g) - 400 cases
-
-- Vaseline Cocoa Glow Body Lotion (400ml) - 150 cases
-
-
-**C. Home Hygiene**
-
-- Vim Dishwash Liquid (750ml) - 1000 cases
-
-- Domex Floor Cleaner (1L) - 500 cases
-
-
-**3. Commercial Terms**
-
-- **Delivery:** Must be delivered to our Bangalore Central Warehouse within 7 days of PO.
-
-- **Payment:** Net 45 days.
-
-- **Shelf Life:** Minimum 80% shelf life remaining upon delivery.
-
-
-**4. Submission**
-
-Please submit your commercial proposal by Dec 20, 2025 including applicable GST and volume discounts.
-
 """
+CLI and Utility Bridge for FMCG RFP PDF Generation
+"""
+import os
+import sys
 
+# Ensure rfp-automation is in sys.path
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+RFP_DIR = os.path.join(BASE_DIR, "rfp-automation")
+if RFP_DIR not in sys.path:
+    sys.path.append(RFP_DIR)
 
-output_path = r"c:\\Users\\Lenovo\\OneDrive\\Desktop\\fmcg agentic ai\\sample_fmcg_rfp.pdf"
+from utils.pdf_generator import generate_rfp_pdf
 
-create_pdf(output_path, content)
+def create_sample_quotation_pdf(output_filename: str = "output/sample_fmcg_quotation.pdf"):
+    """Generates a demo FMCG commercial quote PDF"""
+    sample_data = {
+        "rfp_id": "ORDER_DEMO_2026",
+        "rfp_data": {
+            "client_name": "Metro Cash & Carry Wholesale",
+            "location": "Regional Hub Mumbai"
+        },
+        "pricing": {
+            "pricing_table": [
+                {"sku_name": "Surf Excel Matic Top Load 2kg", "category": "Home Care", "qty": 120, "unit": "packs", "net_unit_price": 448.80, "discount_pct": 6.5, "gst_pct": 18, "line_total_price": 63550.08},
+                {"sku_name": "Dove Hair Fall Rescue Shampoo 340ml", "category": "Personal Care", "qty": 240, "unit": "bottles", "net_unit_price": 233.75, "discount_pct": 6.5, "gst_pct": 18, "line_total_price": 66201.00},
+                {"sku_name": "Vim Dishwash Gel 750ml", "category": "Home Care", "qty": 300, "unit": "bottles", "net_unit_price": 144.92, "discount_pct": 6.5, "gst_pct": 18, "line_total_price": 51301.68},
+                {"sku_name": "Nescafe Classic Coffee Jar 100g", "category": "Beverages", "qty": 150, "unit": "jars", "net_unit_price": 310.20, "discount_pct": 6.0, "gst_pct": 12, "line_total_price": 52113.60},
+                {"sku_name": "Aashirvaad Pure Cow Ghee 1L", "category": "Dairy & Staples", "qty": 80, "unit": "tins", "net_unit_price": 630.50, "discount_pct": 3.0, "gst_pct": 5, "line_total_price": 52962.00}
+            ],
+            "summary": {
+                "subtotal": 244580.00,
+                "total_discount_amount": 16240.00,
+                "tax_amount": 41548.36,
+                "grand_total": 286128.36,
+                "overall_margin_pct": 18.5
+            }
+        }
+    }
+    os.makedirs(os.path.dirname(output_filename), exist_ok=True)
+    out = generate_rfp_pdf(sample_data, output_filename)
+    print(f"✅ Generated sample FMCG quotation PDF at: {out}")
+    return out
 
+if __name__ == "__main__":
+    create_sample_quotation_pdf()

@@ -1,0 +1,45 @@
+{
+  "packs": [
+    {
+      "pack_id": "FEST-DIWALI-LUX-01",
+      "pack_name": "Diwali Royal Dry Fruit & Sweet Delight Hamper",
+      "category": "Seasonal Gifting",
+      "base_price": 1499.00,
+      "gst_rate": 0.05,
+      "items": [
+        {"sku_id": "SKU-SNK-010", "item_name": "Premium California Almonds 500g", "quantity": 1},
+        {"sku_id": "SKU-SNK-011", "item_name": "Roasted Salted Cashews 500g", "quantity": 1},
+        {"sku_id": "SKU-SNK-012", "item_name": "Turkish Dried Figs Anjeer 250g", "quantity": 1},
+        {"sku_id": "SKU-BEV-001", "item_name": "Assam Organic Gold CTC Tea 500g", "quantity": 1}
+      ],
+      "bundle_discount_pct": 12.0
+    },
+    {
+      "pack_id": "FEST-HOLI-ORG-02",
+      "pack_name": "Holi Herbal Glow & Refreshment Hamper",
+      "category": "Seasonal Gifting",
+      "base_price": 899.00,
+      "gst_rate": 0.12,
+      "items": [
+        {"sku_id": "SKU-BEV-008", "item_name": "Royal Kesar Badam Thandai Mix 400g", "quantity": 2},
+        {"sku_id": "SKU-PC-006", "item_name": "Organic Turmeric & Neem Body Wash 300ml", "quantity": 1},
+        {"sku_id": "SKU-PC-001", "item_name": "Herbal Aloe Vera Moisturizing Soap 125g", "quantity": 3}
+      ],
+      "bundle_discount_pct": 10.0
+    },
+    {
+      "pack_id": "FEST-CORP-PREM-03",
+      "pack_name": "Executive Corporate Wellness Basket",
+      "category": "Corporate B2B",
+      "base_price": 2250.00,
+      "gst_rate": 0.18,
+      "items": [
+        {"sku_id": "SKU-BEV-003", "item_name": "Freeze Dried Arabica Gold Coffee 100g", "quantity": 2},
+        {"sku_id": "SKU-BEV-002", "item_name": "Darjeeling First Flush Green Tea 250g", "quantity": 1},
+        {"sku_id": "SKU-SNK-001", "item_name": "Quinoa & Chia Crisps 150g", "quantity": 3},
+        {"sku_id": "SKU-SNK-002", "item_name": "Multigrain Roasted Diet Mixture 400g", "quantity": 2}
+      ],
+      "bundle_discount_pct": 15.0
+    }
+  ]
+}

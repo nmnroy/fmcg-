@@ -1,0 +1,55 @@
+{
+  "order_reference": "DIST-EDI-99214",
+  "client_name": "Apex Wholesale Distributors Pvt Ltd",
+  "location": "Central Distribution Hub, Pune, Maharashtra",
+  "order_date": "2026-03-15",
+  "deadline": "2026-03-22",
+  "channel": "general_trade_distributor",
+  "line_items": [
+    {
+      "id": "1",
+      "item_name": "Surf Excel Matic Top Load 2kg",
+      "description": "Surf Excel Matic Top Load 2kg detergent powder",
+      "specifications": "2kg pack, top load washing machine",
+      "quantity": 500,
+      "unit": "pack",
+      "category_hint": "Home Care"
+    },
+    {
+      "id": "2",
+      "item_name": "Vim Dishwash Gel 750ml",
+      "description": "Vim Lemon Dishwash Liquid Gel 750ml bottle",
+      "specifications": "750ml lemon variant",
+      "quantity": 600,
+      "unit": "bottle",
+      "category_hint": "Home Care"
+    },
+    {
+      "id": "3",
+      "item_name": "Dove Intense Repair Shampoo 340ml",
+      "description": "Dove Intense Repair Shampoo 340ml bottle",
+      "specifications": "340ml damage therapy",
+      "quantity": 400,
+      "unit": "bottle",
+      "category_hint": "Personal Care"
+    },
+    {
+      "id": "4",
+      "item_name": "Tata Tea Premium Desh Ki Chai 1kg",
+      "description": "Tata Tea Premium 1kg leaf tea pack",
+      "specifications": "1kg pouch",
+      "quantity": 300,
+      "unit": "pack",
+      "category_hint": "Beverages"
+    },
+    {
+      "id": "5",
+      "item_name": "Aashirvaad Superior MP Sharbati Atta 10kg",
+      "description": "Aashirvaad Whole Wheat Atta 10kg sack",
+      "specifications": "10kg whole wheat",
+      "quantity": 200,
+      "unit": "pack",
+      "category_hint": "Dairy & Staples"
+    }
+  ]
+}

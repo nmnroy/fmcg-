@@ -238,8 +238,8 @@ if st.session_state.current_rfp_result:
         st.markdown(metric_card("RISK LEVEL", res.get('insights', {}).get('risk_level', 'Medium')), unsafe_allow_html=True)
 
     # TABS
-    tab_req, tab_sku, tab_price, tab_insights, tab_email, tab_chat = st.tabs([
-        "🟩 Requirements Extraction", "🟦 SKU Matching", "💰 Pricing Details", "🧠 Intelligent Insights", "📧 Email Draft", "💬 AI Assistant"
+    tab_req, tab_sku, tab_price, tab_insights, tab_catalog, tab_email, tab_chat = st.tabs([
+        "🟩 Requirements Extraction", "🟦 SKU Matching", "💰 Pricing Details", "🧠 Intelligent Insights", "📚 Master Catalog", "📧 Email Draft", "💬 AI Assistant"
     ])
 
     with tab_req:
@@ -505,6 +505,52 @@ if st.session_state.current_rfp_result:
         if recs:
             for r in recs:
                 st.markdown(f"- {r}")
+
+    with tab_catalog:
+        st.subheader("📚 Master SKU Catalog Explorer")
+        st.caption("Browse, search, and inspect the 100+ active FMCG products available for wholesale supply.")
+        
+        catalog_path = "data/sku_catalog.csv"
+        if not os.path.exists(catalog_path):
+            catalog_path = "rfp-automation/data/sku_catalog.csv"
+            
+        if os.path.exists(catalog_path):
+            import pandas as pd
+            df_cat = pd.read_csv(catalog_path)
+            
+            # Metrics
+            km1, km2, km3 = st.columns(3)
+            with km1:
+                st.metric("Total Master SKUs", len(df_cat))
+            with km2:
+                st.metric("Active Categories", df_cat["category"].nunique() if "category" in df_cat.columns else 6)
+            with km3:
+                avg_cost = df_cat["base_cost"].mean() if "base_cost" in df_cat.columns else 220.0
+                st.metric("Avg Base Unit Cost", f"₹{avg_cost:.2f}")
+
+            # Filter Controls
+            fc1, fc2 = st.columns([1, 2])
+            with fc1:
+                cat_options = ["All Categories"] + sorted(list(df_cat["category"].dropna().unique())) if "category" in df_cat.columns else ["All Categories"]
+                selected_cat = st.selectbox("Filter Category", cat_options)
+            with fc2:
+                search_query = st.text_input("Search Product / Brand / Specs", placeholder="e.g. Dove, Surf, Coffee, Jam, 1kg...")
+
+            # Apply filters
+            filtered_df = df_cat.copy()
+            if selected_cat != "All Categories" and "category" in filtered_df.columns:
+                filtered_df = filtered_df[filtered_df["category"] == selected_cat]
+            if search_query:
+                q = search_query.lower()
+                filtered_df = filtered_df[
+                    filtered_df["name"].str.lower().str.contains(q, na=False) |
+                    filtered_df["specs"].str.lower().str.contains(q, na=False) |
+                    filtered_df["sku_id"].str.lower().str.contains(q, na=False)
+                ]
+
+            st.dataframe(filtered_df, use_container_width=True, hide_index=True)
+        else:
+            st.info("Catalog file not found.")
 
     with tab_email:
         st.subheader("Email Draft")

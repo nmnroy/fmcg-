@@ -1,0 +1,102 @@
+sku_id,name,category,specs,base_cost,unit,gst_pct,moq,pack_size
+HUL_SURF_001,Surf Excel Matic Top Load 2kg,Home Care,"weight:2kg,type:top_load_powder,brand:Surf Excel,category:detergent",480.00,pack,18,10,2kg
+HUL_SURF_002,Surf Excel Matic Front Load 2kg,Home Care,"weight:2kg,type:front_load_powder,brand:Surf Excel,category:detergent",500.00,pack,18,10,2kg
+HUL_SURF_003,Surf Excel Easy Wash 1kg,Home Care,"weight:1kg,type:hand_wash_powder,brand:Surf Excel,category:detergent",110.00,pack,18,24,1kg
+HUL_SURF_004,Surf Excel Matic Liquid Detergent 1L,Home Care,"volume:1L,type:liquid_detergent,brand:Surf Excel,category:detergent",220.00,bottle,18,12,1L
+HUL_RIN_001,Rin Detergent Bar 250g,Home Care,"weight:250g,type:detergent_bar,brand:Rin,category:detergent",30.00,bar,18,48,250g
+HUL_RIN_002,Rin Refresh Detergent Powder 1kg,Home Care,"weight:1kg,type:detergent_powder,brand:Rin,category:detergent",95.00,pack,18,20,1kg
+HUL_VIM_001,Vim Dishwash Gel 750ml,Home Care,"volume:750ml,variant:lemon,brand:Vim,category:dishwashing",155.00,bottle,18,16,750ml
+HUL_VIM_002,Vim Dishwash Bar 500g,Home Care,"weight:500g,variant:lemon,brand:Vim,category:dishwashing",40.00,bar,18,36,500g
+HUL_VIM_003,Vim Anti-Bacterial Dishwash Gel 500ml,Home Care,"volume:500ml,variant:neem,brand:Vim,category:dishwashing",115.00,bottle,18,20,500ml
+HUL_DOM_001,Domex Disinfectant Floor Cleaner 1L,Home Care,"volume:1L,type:disinfectant_cleaner,brand:Domex,category:surface_care",175.00,bottle,18,12,1L
+HUL_DOM_002,Domex Fresh Guard Toilet Cleaner 750ml,Home Care,"volume:750ml,type:toilet_cleaner,brand:Domex,category:surface_care",140.00,bottle,18,15,750ml
+HUL_SUN_001,Sunsilk Black Shine Shampoo 180ml,Personal Care,"volume:180ml,variant:black_shine,brand:Sunsilk,category:shampoo",130.00,bottle,18,24,180ml
+HUL_SUN_002,Sunsilk Pink Thick & Long Shampoo 180ml,Personal Care,"volume:180ml,variant:thick_long,brand:Sunsilk,category:shampoo",130.00,bottle,18,24,180ml
+HUL_SUN_003,Sunsilk Onion & Jojoba Oil Shampoo 370ml,Personal Care,"volume:370ml,variant:anti_hairfall,brand:Sunsilk,category:shampoo",280.00,bottle,18,12,370ml
+HUL_DOVE_001,Dove Hair Fall Rescue Shampoo 340ml,Personal Care,"volume:340ml,variant:hair_fall,brand:Dove,category:shampoo",250.00,bottle,18,12,340ml
+HUL_DOVE_002,Dove Intense Repair Shampoo 340ml,Personal Care,"volume:340ml,variant:intense_repair,brand:Dove,category:shampoo",250.00,bottle,18,12,340ml
+HUL_DOVE_003,Dove Daily Shine Conditioner 175ml,Personal Care,"volume:175ml,variant:daily_shine,brand:Dove,category:conditioner",185.00,tube,18,18,175ml
+HUL_DOVE_004,Dove Cream Beauty Bathing Bar 100g,Personal Care,"weight:100g,variant:moisturizing,brand:Dove,category:soap",65.00,bar,18,36,100g
+HUL_TRE_001,Tresemme Keratin Smooth Shampoo 340ml,Personal Care,"volume:340ml,variant:keratin_smooth,brand:Tresemme,category:shampoo",320.00,bottle,18,12,340ml
+HUL_TRE_002,Tresemme Keratin Smooth Conditioner 190ml,Personal Care,"volume:190ml,variant:keratin_smooth,brand:Tresemme,category:conditioner",240.00,tube,18,16,190ml
+HUL_LUX_001,Lux International Creamy Perfection 125g,Personal Care,"weight:125g,variant:creamy,brand:Lux,category:soap",35.00,bar,18,48,125g
+HUL_LUX_002,Lux Velvet Glow Jasmine Soap 100g,Personal Care,"weight:100g,variant:jasmine,brand:Lux,category:soap",30.00,bar,18,48,100g
+HUL_LIFE_001,Lifebuoy Total 10 Soap 125g,Personal Care,"weight:125g,variant:germ_protection,brand:Lifebuoy,category:soap",32.00,bar,18,48,125g
+HUL_LIFE_002,Lifebuoy Care Handwash Refill 750ml,Personal Care,"volume:750ml,variant:antibacterial,brand:Lifebuoy,category:handwash",99.00,pouch,18,20,750ml
+HUL_PEARS_001,Pears Pure & Gentle Soap 125g,Personal Care,"weight:125g,variant:glycerin,brand:Pears,category:soap",45.00,bar,18,48,125g
+HUL_VAS_001,Vaseline Intensive Care Cocoa Glow 400ml,Personal Care,"volume:400ml,variant:cocoa_glow,brand:Vaseline,category:body_lotion",360.00,bottle,18,12,400ml
+HUL_VAS_002,Vaseline Deep Moisture Body Lotion 400ml,Personal Care,"volume:400ml,variant:deep_moisture,brand:Vaseline,category:body_lotion",310.00,bottle,18,12,400ml
+HUL_VAS_003,Vaseline Original Pure Petroleum Jelly 85g,Personal Care,"weight:85g,variant:pure_jelly,brand:Vaseline,category:skincare",115.00,tub,18,24,85g
+HUL_PON_001,Ponds White Beauty Daily Anti-Spot Face Cream 50g,Personal Care,"weight:50g,variant:brightening,brand:Ponds,category:face_care",145.00,tub,18,24,50g
+HUL_PON_002,Ponds Pure Detox Mineral Clay Foam 100g,Personal Care,"weight:100g,variant:activated_charcoal,brand:Ponds,category:facewash",175.00,tube,18,20,100g
+HUL_BRU_001,Bru Instant Coffee 100g,Beverages,"weight:100g,type:instant_coffee,brand:Bru,category:coffee",290.00,pack,18,20,100g
+HUL_BRU_002,Bru Gold Freeze Dried Coffee 100g,Beverages,"weight:100g,type:freeze_dried_coffee,brand:Bru,category:coffee",380.00,jar,18,12,100g
+HUL_TAJ_001,Taj Mahal Tea 500g,Beverages,"weight:500g,type:premium_tea,brand:Taj Mahal,category:tea",430.00,pack,5,15,500g
+HUL_RED_001,Red Label Tea 1kg,Beverages,"weight:1kg,type:leaf_tea,brand:Red Label,category:tea",550.00,pack,5,10,1kg
+HUL_RED_002,Red Label Natural Care Tea 500g,Beverages,"weight:500g,type:herbal_tea,brand:Red Label,category:tea",310.00,pack,5,15,500g
+HUL_KIS_001,Kissan Mixed Fruit Jam 700g,Packaged Foods,"weight:700g,type:jam,brand:Kissan,category:breakfast",250.00,bottle,12,12,700g
+HUL_KIS_002,Kissan Fresh Tomato Ketchup 1kg,Packaged Foods,"weight:1kg,type:ketchup,brand:Kissan,category:sauce",160.00,bottle,12,12,1kg
+HUL_HOR_001,Horlicks Classic Malt Health Drink 1kg,Beverages,"weight:1kg,type:malt_drink,brand:Horlicks,category:health_drink",460.00,jar,18,8,1kg
+HUL_BOO_001,Boost Energy Drink Refill Pack 1kg,Beverages,"weight:1kg,type:chocolate_malt,brand:Boost,category:health_drink",480.00,pack,18,8,1kg
+HUL_CLO_001,Closeup Everfresh Red Hot Toothpaste 150g,Oral Care,"weight:150g,variant:gel,brand:Closeup,category:toothpaste",120.00,tube,18,36,150g
+HUL_PEP_001,Pepsodent Expert Protection Toothpaste 140g,Oral Care,"weight:140g,variant:gum_care,brand:Pepsodent,category:toothpaste",135.00,tube,18,30,140g
+ITC_ASH_001,Aashirvaad Superior MP Sharbati Atta 5kg,Dairy & Staples,"weight:5kg,type:whole_wheat_atta,brand:Aashirvaad,category:staples",295.00,pack,0,6,5kg
+ITC_ASH_002,Aashirvaad Superior MP Sharbati Atta 10kg,Dairy & Staples,"weight:10kg,type:whole_wheat_atta,brand:Aashirvaad,category:staples",560.00,pack,0,4,10kg
+ITC_ASH_003,Aashirvaad Svasti Pure Cow Ghee 1L,Dairy & Staples,"volume:1L,type:cow_ghee,brand:Aashirvaad,category:dairy",650.00,tin,12,8,1L
+ITC_SUN_001,Sunfeast Dark Fantasy Choco Fills 300g,Packaged Foods,"weight:300g,variant:choco_fills,brand:Sunfeast,category:biscuits",140.00,pack,18,24,300g
+ITC_SUN_002,Sunfeast Mom's Magic Cashew & Almond 200g,Packaged Foods,"weight:200g,variant:nut_cookies,brand:Sunfeast,category:biscuits",50.00,pack,18,36,200g
+ITC_YIP_001,Sunfeast YiPPee! Magic Masala Noodles 280g,Packaged Foods,"weight:280g,variant:instant_noodles_4pack,brand:YiPPee,category:noodles",55.00,pack,12,24,280g
+ITC_B_NAT_001,B Natural Mixed Fruit Juice 1L,Beverages,"volume:1L,type:fruit_juice,brand:B Natural,category:juice",110.00,tetra_pack,12,12,1L
+ITC_SAV_001,Savlon Moisture Shield Antiseptic Liquid 500ml,Personal Care,"volume:500ml,type:antiseptic_disinfectant,brand:Savlon,category:hygiene",180.00,bottle,18,16,500ml
+ITC_SAV_002,Savlon Hexa Advanced Soap 100g,Personal Care,"weight:100g,variant:antibacterial,brand:Savlon,category:soap",42.00,bar,18,48,100g
+ITC_CL_001,Classmate Premium Notebook 6-Pack 172-Pages,Stationery,"pages:172,type:ruled_exercise_book,brand:Classmate,category:stationery",270.00,pack,12,10,6-pack
+NES_MAG_001,Maggi 2-Minute Masala Instant Noodles 560g (8-Pack),Packaged Foods,"weight:560g,type:instant_noodles_8pack,brand:Maggi,category:noodles",112.00,pack,12,16,560g
+NES_MAG_002,Maggi Hot & Sweet Tomato Chilli Sauce 1kg,Packaged Foods,"weight:1kg,type:chilli_sauce,brand:Maggi,category:sauce",170.00,bottle,12,12,1kg
+NES_MAG_003,Maggi Magic Cubes Vegetarian 40g,Packaged Foods,"weight:40g,type:seasoning_cubes,brand:Maggi,category:spices",45.00,pack,12,40,40g
+NES_NES_001,Nescafe Classic Instant Coffee Jar 100g,Beverages,"weight:100g,type:pure_coffee,brand:Nescafe,category:coffee",330.00,jar,18,12,100g
+NES_NES_002,Nescafe Sunrise Rich Aroma Coffee 200g,Beverages,"weight:200g,type:coffee_chicory_mix,brand:Nescafe,category:coffee",410.00,pack,18,12,200g
+NES_KIT_001,KitKat 4-Finger Share Bag 154g,Packaged Foods,"weight:154g,variant:crispy_wafer_chocolate,brand:KitKat,category:confectionery",125.00,pack,18,24,154g
+NES_MIL_001,Nestle Everyday Dairy Whitener 1kg,Dairy & Staples,"weight:1kg,type:milk_powder,brand:Nestle,category:dairy",460.00,pouch,5,10,1kg
+NES_MIL_002,Nestle Milkmaid Sweetened Condensed Milk 400g,Dairy & Staples,"weight:400g,type:condensed_milk,brand:Nestle,category:dairy",145.00,tin,12,24,400g
+NES_CER_001,Nestle Cerelac Wheat-Apple Infant Cereal 300g,Packaged Foods,"weight:300g,type:baby_cereal,brand:Nestle,category:baby_food",290.00,pack,5,12,300g
+BRT_GOL_001,Britannia Good Day Butter Cookies 600g Value Pack,Packaged Foods,"weight:600g,variant:butter_cookies,brand:Britannia,category:biscuits",135.00,pack,18,20,600g
+BRT_GOL_002,Britannia Good Day Cashew Cookies 600g,Packaged Foods,"weight:600g,variant:cashew_nut,brand:Britannia,category:biscuits",145.00,pack,18,20,600g
+BRT_MAR_001,Britannia Marie Gold Biscuits 1kg Family Pack,Packaged Foods,"weight:1kg,variant:tea_biscuit,brand:Britannia,category:biscuits",140.00,pack,18,12,1kg
+BRT_NUT_001,Britannia NutriChoice Digestive High Fibre 1kg,Packaged Foods,"weight:1kg,variant:high_fibre,brand:Britannia,category:biscuits",210.00,pack,18,10,1kg
+BRT_CHE_001,Britannia Processed Cheese Slices 400g (20 Slices),Dairy & Staples,"weight:400g,slices:20,brand:Britannia,category:dairy",240.00,pack,12,15,400g
+BRT_CHE_002,Britannia Cheezza Block Cheese 500g,Dairy & Staples,"weight:500g,type:pizza_cheese_block,brand:Britannia,category:dairy",290.00,pack,12,12,500g
+BRT_CAK_001,Britannia Fruiti Roll Fruit Cake 150g,Packaged Foods,"weight:150g,type:fruit_bar_cake,brand:Britannia,category:bakery",40.00,pack,18,30,150g
+DAB_HON_001,Dabur 100% Pure Honey 1kg Squeezy,Dairy & Staples,"weight:1kg,type:pure_honey,brand:Dabur,category:health_food",410.00,bottle,5,10,1kg
+DAB_HON_002,Dabur 100% Pure Honey 500g,Dairy & Staples,"weight:500g,type:pure_honey,brand:Dabur,category:health_food",230.00,bottle,5,16,500g
+DAB_RED_001,Dabur Red Ayurvedic Toothpaste 300g (2x150g),Oral Care,"weight:300g,type:ayurvedic_paste,brand:Dabur,category:toothpaste",180.00,pack,18,20,300g
+DAB_MES_001,Dabur Meswak Herbal Toothpaste 200g,Oral Care,"weight:200g,type:miswak_herbal,brand:Dabur,category:toothpaste",125.00,tube,18,24,200g
+DAB_CHA_001,Dabur Chyawanprash Awaleha 1kg Immunity Booster,Packaged Foods,"weight:1kg,type:ayurvedic_immunity,brand:Dabur,category:health_food",395.00,jar,12,10,1kg
+DAB_AMLA_001,Dabur Amla Hair Oil 450ml,Personal Care,"volume:450ml,type:hair_oil,brand:Dabur,category:hair_care",210.00,bottle,18,16,450ml
+DAB_VAT_001,Dabur Vatika Enriched Coconut Hair Oil 300ml,Personal Care,"volume:300ml,type:coconut_hair_oil,brand:Dabur,category:hair_care",165.00,bottle,18,20,300g
+DAB_REA_001,Real Fruit Power Mixed Fruit Juice 1L,Beverages,"volume:1L,type:mixed_fruit_juice,brand:Real,category:juice",115.00,tetra_pack,12,12,1L
+DAB_REA_002,Real Fruit Power Pomegranate Juice 1L,Beverages,"volume:1L,type:pomegranate_juice,brand:Real,category:juice",130.00,tetra_pack,12,12,1L
+MAR_PAR_001,Parachute 100% Pure Coconut Oil 500ml,Personal Care,"volume:500ml,type:pure_coconut_oil,brand:Parachute,category:hair_care",195.00,bottle,5,16,500ml
+MAR_PAR_002,Parachute Advansed Aloe Vera Enriched Hair Oil 350ml,Personal Care,"volume:350ml,type:aloe_vera_oil,brand:Parachute,category:hair_care",180.00,bottle,18,18,350ml
+MAR_SAF_001,Saffola Gold Pro Healthy Lifestyle Edible Oil 5L Jar,Dairy & Staples,"volume:5L,type:blended_cooking_oil,brand:Saffola,category:edible_oil",880.00,jar,5,4,5L
+MAR_SAF_002,Saffola Total Pro Heart Conscious Edible Oil 5L Jar,Dairy & Staples,"volume:5L,type:heart_cooking_oil,brand:Saffola,category:edible_oil",960.00,jar,5,4,5L
+MAR_SAF_003,Saffola Masala Oats Classic Masala 500g,Packaged Foods,"weight:500g,variant:spicy_masala_oats,brand:Saffola,category:breakfast",180.00,pouch,12,18,500g
+MAR_LIV_001,Livon Anti-Frizz Hair Serum with Vitamin E 100ml,Personal Care,"volume:100ml,type:hair_serum,brand:Livon,category:hair_care",260.00,bottle,18,20,100ml
+TAT_TEA_001,Tata Tea Premium Desh Ki Chai 1kg,Beverages,"weight:1kg,type:leaf_tea,brand:Tata Tea,category:tea",480.00,pack,5,10,1kg
+TAT_TEA_002,Tata Tea Gold Rich Taste & Aroma 500g,Beverages,"weight:500g,type:orthodox_blend,brand:Tata Tea,category:tea",310.00,pack,5,15,500g
+TAT_SAL_001,Tata Salt Vacuum Evaporated Iodized 1kg,Dairy & Staples,"weight:1kg,type:iodized_table_salt,brand:Tata Salt,category:staples",26.00,pack,0,30,1kg
+TAT_SAL_002,Tata Salt Lite Low Sodium Iodized Salt 1kg,Dairy & Staples,"weight:1kg,type:low_sodium_salt,brand:Tata Salt,category:staples",42.00,pack,0,24,1kg
+TAT_SAM_001,Tata Sampann Unpolished Toor Dal 1kg,Dairy & Staples,"weight:1kg,type:unpolished_pulses,brand:Tata Sampann,category:staples",185.00,pack,0,15,1kg
+TAT_SAM_002,Tata Sampann Pure Turmeric Powder 500g,Dairy & Staples,"weight:500g,type:ground_spices,brand:Tata Sampann,category:spices",145.00,pack,5,20,500g
+TAT_COP_001,Tata Copper Plus Water Dispenser Jar 20L,Beverages,"volume:20L,type:packaged_drinking_water,brand:Tata Copper,category:water",90.00,jar,18,5,20L
+COL_MAX_001,Colgate MaxFresh Peppermint Ice Gel Toothpaste 300g (2x150g),Oral Care,"weight:300g,variant:peppermint_cooling_crystals,brand:Colgate,category:toothpaste",210.00,pack,18,20,300g
+COL_STR_001,Colgate Strong Teeth Calcium Toothpaste 500g Family Pack,Oral Care,"weight:500g,variant:calcium_dental_protection,brand:Colgate,category:toothpaste",240.00,pack,18,15,500g
+COL_ZIG_001,Colgate ZigZag Charcoal Medium Toothbrush 6-Pack,Oral Care,"quantity:6,type:charcoal_bristles,brand:Colgate,category:toothbrush",160.00,pack,18,25,6-pack
+COL_PLX_001,Colgate Plax Peppermint Fresh Mouthwash 500ml,Oral Care,"volume:500ml,type:alcohol_free_mouthwash,brand:Colgate,category:oral_rinse",220.00,bottle,18,15,500ml
+GOD_GDR_001,Godrej No.1 Lime & Aloe Vera Soap 500g (5x100g),Personal Care,"weight:500g,variant:lime_aloe,brand:Godrej No.1,category:soap",120.00,pack,18,24,500g
+GOD_HIT_001,Godrej Kala HIT Mosquito Spray 625ml,Home Care,"volume:625ml,type:insecticide_aerosol,brand:HIT,category:pest_control",295.00,can,18,12,625ml
+GOD_HIT_002,Godrej Lal HIT Cockroach Killer Spray 625ml,Home Care,"volume:625ml,type:crawling_insect_spray,brand:HIT,category:pest_control",310.00,can,18,12,625ml
+GOD_AER_001,Godrej aer Pocket Bathroom Fragrance Assorted 3-Pack,Home Care,"quantity:3,type:gel_air_freshener,brand:Godrej aer,category:air_care",165.00,pack,18,20,3-pack
+AMU_BUT_001,Amul Pasteurised Salted Table Butter 500g,Dairy & Staples,"weight:500g,type:salted_butter,brand:Amul,category:dairy",275.00,carton,12,20,500g
+AMU_GHE_001,Amul Pure Cow Ghee 1L Tin,Dairy & Staples,"volume:1L,type:cow_ghee,brand:Amul,category:dairy",620.00,tin,12,10,1L
+AMU_CHE_001,Amul Processed Cheese Block 1kg,Dairy & Staples,"weight:1kg,type:cheddar_processed,brand:Amul,category:dairy",510.00,box,12,8,1kg
+AMU_TAZ_001,Amul Taaza Homogenised Toned Milk 1L (Pack of 12),Dairy & Staples,"volume:12L,type:uht_toned_milk,brand:Amul,category:dairy",780.00,crate,5,4,12x1L

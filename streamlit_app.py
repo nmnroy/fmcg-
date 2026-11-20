@@ -41,10 +41,25 @@ if 'current_rfp_result' not in st.session_state:
 if 'sku_decisions' not in st.session_state:
     st.session_state['sku_decisions'] = {}
 
+# Currency Conversion Matrix
+CURRENCY_RATES = {
+    "INR (₹)": {"rate": 1.0, "symbol": "₹"},
+    "USD ($)": {"rate": 0.012, "symbol": "$"},
+    "EUR (€)": {"rate": 0.011, "symbol": "€"},
+    "GBP (£)": {"rate": 0.0095, "symbol": "£"},
+    "AED (د.إ)": {"rate": 0.044, "symbol": "AED "}
+}
+
+def format_currency(amount_in_inr: float, currency_name: str = "INR (₹)") -> str:
+    cfg = CURRENCY_RATES.get(currency_name, CURRENCY_RATES["INR (₹)"])
+    converted = amount_in_inr * cfg["rate"]
+    return f"{cfg['symbol']}{converted:,.2f}"
+
 # --- SIDEBAR & THEME ---
 with st.sidebar:
     st.markdown("### ⚙️ Settings")
     st.session_state.theme = st.radio("Theme Mode", ["Dark", "Light"], horizontal=True)
+    selected_currency = st.selectbox("Currency Display", list(CURRENCY_RATES.keys()), index=0)
     st.markdown("---")
 
 # --- DYNAMIC CSS ---
@@ -231,7 +246,7 @@ if st.session_state.current_rfp_result:
     with m1: 
         st.markdown(metric_card("WIN PROBABILITY", f"{res.get('insights', {}).get('win_probability_pct', 65)}%"), unsafe_allow_html=True)
     with m2: 
-        st.markdown(metric_card("QUOTE VALUE", f"₹{pricing.get('grand_total', 0):,.0f}"), unsafe_allow_html=True)
+        st.markdown(metric_card("QUOTE VALUE", format_currency(pricing.get('grand_total', 0), selected_currency)), unsafe_allow_html=True)
     with m3: 
         st.markdown(metric_card("MARGIN", f"{pricing.get('overall_margin_pct', 0)}%"), unsafe_allow_html=True)
     with m4:

@@ -119,7 +119,7 @@ def test_backend_api():
     return "FastAPI Backend verified (/api/health responded 200 OK)"
 
 
-def main():
+def run_system_audit() -> bool:
     print("\n" + "=" * 60)
     print("  FMCG AGENTIC AI - SYSTEM INTEGRATION AUDIT")
     print("=" * 60 + "\n")
@@ -158,11 +158,16 @@ def main():
         print(f"  ALL {len(checks)} SYSTEM CHECKS PASSED IN {total_time:.2f}s")
         print("  System status: PRODUCTION READY")
         print("=" * 60 + "\n")
-        sys.exit(0)
+        return True
     else:
         print(f"  AUDIT FAILED (Finished in {total_time:.2f}s)")
         print("=" * 60 + "\n")
-        sys.exit(1)
+        return False
+
+
+def main():
+    success = run_system_audit()
+    sys.exit(0 if success else 1)
 
 
 if __name__ == "__main__":

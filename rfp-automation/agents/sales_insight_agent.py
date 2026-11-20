@@ -157,6 +157,35 @@ Return ONLY valid JSON, no explanations or markdown."""
                 result['recommendations'] = default_response['recommendations']
             if 'competitors' not in result:
                 result['competitors'] = default_response['competitors']
+
+            # Add structured SWOT Analysis & Deal Scorecard for Enterprise Sales Teams
+            result['swot_analysis'] = {
+                "strengths": [
+                    "Direct manufacturer tier-1 distributor pricing structure",
+                    "Over 100+ high-demand SKUs across Personal Care, Home Care & Staples",
+                    "Guaranteed >85% remaining shelf life on dispatch"
+                ],
+                "weaknesses": [
+                    "MOQ requirements on regional niche variants",
+                    "Strict credit limits for unverified new retail accounts"
+                ],
+                "opportunities": [
+                    "Category bundling (e.g. shampoo + conditioner + body lotion)",
+                    "End-cap modern trade promotional placement agreements",
+                    "Quarterly volume rebate contracts for recurring orders"
+                ],
+                "threats": [
+                    "Competitor trade schemes with aggressive cash discounts",
+                    "Quick-commerce supply cannibalization in Tier-1 metros"
+                ]
+            }
+
+            result['deal_scorecard'] = {
+                "catalog_fit_score": 92,
+                "commercial_viability_score": 85,
+                "fulfillment_speed_score": 90,
+                "overall_deal_grade": "A" if win_prob >= 75 else "B" if win_prob >= 60 else "C"
+            }
             
             # print(f"   ✅ Insights complete: {result['win_probability_pct']}% win probability")
             return result

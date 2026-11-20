@@ -42,62 +42,73 @@ class SalesInsightsAgent:
         
         # Default response (returned on any error)
         default_response = {
-            "win_probability_pct": 65,
-            "confidence_level": "Medium",
-            "risk_level": "Medium",
+            "win_probability_pct": 72,
+            "confidence_level": "High",
+            "risk_level": "Low",
             "risks": [
                 {
-                    "type": "commercial",
-                    "description": "Short delivery timeline",
-                    "severity": "medium",
-                    "mitigation": "Pre-book inventory"
+                    "type": "supply_chain",
+                    "description": "High volume fulfillment across multiple SKU categories",
+                    "severity": "low",
+                    "mitigation": "Dispatch from regional central warehouse with buffer inventory"
                 }
             ],
-            "competitors": ["Philips", "Prestige", "Havells"],
-            "strengths": ["Pricing", "Supply Chain", "Product Variety"],
+            "competitors": ["P&G", "ITC Foods", "Nestlé", "Britannia", "Dabur"],
+            "strengths": [
+                "Direct Manufacturer Supply Rates",
+                "Pan-India Fast Turnaround Logistics",
+                "Guaranteed 85%+ Remaining Shelf-Life",
+                "Full Category Coverage (Personal, Home Care & Foods)"
+            ],
             "recommendations": [
-                "Highlight premium product benefits",
-                "Offer competitive warranty terms",
-                "Include free color consultation"
+                "Offer 3% additional rebate on full truckload (FTL) orders",
+                "Recommend bundling hair conditioners with ordered shampoo quantities",
+                "Provide promotional end-cap marketing materials for modern trade stores"
             ]
         }
         
         try:
-            # Get basic info
-            project_type = rfp_data.get('project_type', 'commercial')
-            quality = rfp_data.get('quality_tier', 'premium')
-            area = rfp_data.get('area_sqft', 10000)
+            line_items = rfp_data.get('line_items', [])
+            item_count = len(line_items)
+            total_qty = sum(item.get('quantity', 1) for item in line_items)
+            client_name = rfp_data.get('client_name', 'Retail Partner')
             
             # Extract pricing info if available
             pricing_summary = pricing_data.get('summary', {}) if pricing_data else {}
             total_value = pricing_summary.get('grand_total', 0)
-            margin = pricing_summary.get('overall_margin_pct', 0)
+            margin = pricing_summary.get('overall_margin_pct', 18)
             
-            print(f"   Project: {project_type}, Quality: {quality}, Area: {area} sqft, Value: {total_value}, Margin: {margin}%")
+            print(f"   Client: {client_name}, SKUs: {item_count}, Total Qty: {total_qty}, Value: ₹{total_value:,.0f}, Margin: {margin}%")
             
             # Create focused prompt
-            prompt = f"""Analyze this painting project RFP for Asian Paints and calculate win probability.
+            prompt = f"""Analyze this FMCG wholesale / retail procurement order and calculate win probability.
 
-Project: {project_type} building, {area} sq ft, {quality} quality
-Pricing: Value ₹{total_value:,.0f} with {margin}% margin
-RFP Text: {rfp_text[:1000]}
+Client / Retailer: {client_name}
+Order Scope: {item_count} SKU line items, total volume {total_qty} units
+Pricing: Value ₹{total_value:,.0f} with {margin}% gross margin
+Order Snippet: {rfp_text[:1000]}
 
-Calculate win probability (0-100) based on:
-- "Asian Paints" mentioned: +20
-- Premium/luxury tier: +15  
-- Large project >20k sqft: +10
-- Clear specifications: +10
-- High margin (>20%): -10 (price risk)
-- Competitive margin (10-15%): +10
-- Base: 50
+Calculate FMCG win probability (0-100) based on:
+- High volume order (>500 units or >₹100k value): +15
+- High SKU catalog availability (>80% match): +20
+- Competitive FMCG margin (12-22%): +15
+- Standard delivery timeline (>4 days): +10
+- Excessive margin (>28%): -10 (price resistance risk)
+- Tight delivery timeline (<48 hrs): -10 (fulfillment risk)
+- Base score: 50
 
 Return ONLY this JSON structure:
 {{
-    "win_probability_pct": 75,
+    "win_probability_pct": 78,
     "confidence_level": "High",
-    "risk_level": "Medium",
-    "risks": [{{"type": "commercial", "description": "Short delivery timeline", "severity": "medium", "mitigation": "Pre-book inventory"}}],
-    "competitors": ["Philips", "Prestige", "Havells"],
+    "risk_level": "Low",
+    "risks": [{{"type": "supply_chain", "description": "High volume packaging demand", "severity": "medium", "mitigation": "Pre-allocate stock from regional fulfillment hub"}}],
+    "competitors": ["P&G", "ITC", "Nestlé", "Dabur", "Britannia"],
+    "strengths": ["Direct Distributor Pricing", "Guaranteed Fresh Stock (>85% Shelf Life)", "Rapid Dispatch SLA"],
+    "recommendations": ["Bundle complementary items", "Offer 2% prompt payment discount"]
+}}
+
+Return ONLY valid JSON, no explanations or markdown."""
     "strengths": ["Pricing", "Supply Chain", "Product Variety"],
     "recommendations": ["rec 1", "rec 2"]
 }}

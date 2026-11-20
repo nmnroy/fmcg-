@@ -1,8 +1,8 @@
 """
 RFP Intake & Classification Agent
 
-Parses incoming RFP documents (text/PDF) to extract structured data
-and classify relevance for Asian Paints.
+Parses incoming RFP / purchase order documents (text/PDF) to extract structured FMCG data
+and classify relevance for FMCG / Retail distribution.
 
 Author: FMCG RFP Automation Team
 """

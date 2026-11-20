@@ -11,6 +11,8 @@ import SKUMatchingTab from './components/SKUMatchingTab';
 import PricingTab from './components/PricingTab';
 import ProposalTab from './components/ProposalTab';
 import ChatTab from './components/ChatTab';
+import AnalyticsTab from './components/AnalyticsTab';
+import CatalogTab from './components/CatalogTab';
 
 const RequirementsTab = ({ data }: { data: any }) => (
   <div className="p-6 bg-surface rounded-lg">
@@ -165,6 +167,20 @@ function App() {
 
       case 'chat':
         return result ? <ChatTab contextData={result} /> : <div className="p-8">AI Assistant ready. Upload RFP to begin context.</div>;
+
+      case 'analytics':
+        return (
+          <div className="p-8">
+            <AnalyticsTab />
+          </div>
+        );
+
+      case 'catalog':
+        return (
+          <div className="p-8">
+            <CatalogTab />
+          </div>
+        );
 
       default:
         return <Dashboard />;

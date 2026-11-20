@@ -10,6 +10,7 @@ const Sidebar = ({ activeTab, setActiveTab }: SidebarProps) => {
         { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard },
         { id: 'active-rfps', label: 'Active RFPs', icon: FileText },
         { id: 'agents', label: 'AI Agents', icon: Bot },
+        { id: 'catalog', label: 'Master Catalog', icon: Settings },
         { id: 'analytics', label: 'Analytics', icon: BarChart2 },
         { id: 'team', label: 'Team', icon: Users },
     ];

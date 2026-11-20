@@ -1,4 +1,7 @@
-# Byte-compiled / optimized / DLL files
+# Output & Test artifacts
+output/
+data/test_llm_cache.json
+*.cache.json
 __pycache__/
 *.py[cod]
 *$py.class

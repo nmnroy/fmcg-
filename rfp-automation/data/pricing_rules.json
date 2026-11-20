@@ -1,61 +1,112 @@
 {
-  "margin_rules": {
-    "minimum_margin_pct": 12,
-    "recommended_margin_pct": 20,
-    "strategic_margin_pct": 15,
-    "government_margin_pct": 10,
-    "dealer_margin_pct": 18
-  },
-  "discounts": {
-    "bulk_tier1": {
-      "min_quantity": 50,
-      "discount_pct": 5,
-      "description": "50-200 units"
+  "fmcg_channel_margins": {
+    "modern_trade": {
+      "target_margin_pct": 18.0,
+      "min_margin_pct": 12.0,
+      "payment_terms": "Net 30 days"
     },
-    "bulk_tier2": {
-      "min_quantity": 200,
-      "discount_pct": 10,
-      "description": "200-500 units"
+    "general_trade_distributor": {
+      "target_margin_pct": 14.0,
+      "min_margin_pct": 9.0,
+      "payment_terms": "Net 15 days"
     },
-    "bulk_tier3": {
-      "min_quantity": 500,
-      "discount_pct": 15,
-      "description": "500-1000 units"
+    "quick_commerce": {
+      "target_margin_pct": 22.0,
+      "min_margin_pct": 15.0,
+      "payment_terms": "Net 7 days"
     },
-    "bulk_tier4": {
-      "min_quantity": 1000,
-      "discount_pct": 18,
-      "description": "1000+ units (mega projects)"
+    "horeca_institutional": {
+      "target_margin_pct": 20.0,
+      "min_margin_pct": 14.0,
+      "payment_terms": "Advance / Net 15"
     },
-    "project_based": {
-      "min_value": 500000,
-      "discount_pct": 12,
-      "description": "Projects over ₹5 lakhs"
-    },
-    "government_tender": {
-      "additional_discount_pct": 5,
-      "description": "Government/PSU tenders"
-    },
-    "strategic_client": {
-      "additional_discount_pct": 3,
-      "description": "Major contractors/developers"
+    "corporate_gifting": {
+      "target_margin_pct": 25.0,
+      "min_margin_pct": 18.0,
+      "payment_terms": "100% Advance"
     }
   },
-  "approval_thresholds": {
-    "regional_manager_below_margin": 15,
-    "zonal_head_below_margin": 12,
-    "cfo_approval_below_margin": 10
+  "volume_discount_tiers": [
+    {
+      "tier": 1,
+      "min_units": 50,
+      "max_units": 199,
+      "discount_pct": 3.0,
+      "description": "Standard wholesale batch (50-199 units)"
+    },
+    {
+      "tier": 2,
+      "min_units": 200,
+      "max_units": 499,
+      "discount_pct": 6.5,
+      "description": "Medium distributor volume (200-499 units)"
+    },
+    {
+      "tier": 3,
+      "min_units": 500,
+      "max_units": 999,
+      "discount_pct": 10.0,
+      "description": "Large retail chain volume (500-999 units)"
+    },
+    {
+      "tier": 4,
+      "min_units": 1000,
+      "max_units": 4999,
+      "discount_pct": 14.0,
+      "description": "Supermarket bulk procurement (1000-4999 units)"
+    },
+    {
+      "tier": 5,
+      "min_units": 5000,
+      "max_units": null,
+      "discount_pct": 18.0,
+      "description": "Enterprise mega-restock (5000+ units)"
+    }
+  ],
+  "gst_category_slabs": {
+    "Dairy & Staples": {
+      "gst_pct": 5.0,
+      "hsn_code": "0402"
+    },
+    "Beverages": {
+      "gst_pct": 12.0,
+      "hsn_code": "0902"
+    },
+    "Packaged Foods": {
+      "gst_pct": 12.0,
+      "hsn_code": "1905"
+    },
+    "Home Care": {
+      "gst_pct": 18.0,
+      "hsn_code": "3402"
+    },
+    "Personal Care": {
+      "gst_pct": 18.0,
+      "hsn_code": "3305"
+    },
+    "Oral Care": {
+      "gst_pct": 18.0,
+      "hsn_code": "3306"
+    },
+    "Stationery": {
+      "gst_pct": 12.0,
+      "hsn_code": "4820"
+    }
   },
-  "payment_terms": {
-    "standard": "30 days",
-    "government": "45-60 days",
-    "dealer": "15 days",
-    "project": "As per milestone"
+  "logistics_and_freight": {
+    "free_shipping_threshold_inr": 50000,
+    "standard_freight_pct": 2.5,
+    "express_delivery_surcharge_pct": 5.0,
+    "temperature_controlled_dairy_surcharge_pct": 3.0
   },
-  "warranty_terms": {
-    "interior_emulsion": "2 years",
-    "exterior_emulsion": "5 years",
-    "weatherproof": "7 years",
-    "industrial": "3 years"
+  "compliance_and_shelf_life": {
+    "min_shelf_life_pct_at_dispatch": 80,
+    "damage_breakage_allowance_pct": 1.0,
+    "return_window_days": 7
+  },
+  "approval_hierarchy": {
+    "sales_exec_max_discount_pct": 8.0,
+    "sales_manager_max_discount_pct": 14.0,
+    "commercial_director_approval_above_discount_pct": 14.0
   }
 }

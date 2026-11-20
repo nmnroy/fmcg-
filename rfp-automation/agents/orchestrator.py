@@ -1,29 +1,21 @@
 """
-LangGraph Orchestrator for RFP Automation
+LangGraph & Sequential Pipeline Orchestrator for FMCG RFP Automation
 
-Coordinates the full pipeline:
-Intake -> SKU Matching -> Pricing -> Proposal -> Insights
+Coordinates the full multi-agent pipeline:
+Intake -> SKU Matching -> Pricing -> Compliance Guardrails -> Insights -> Proposal
 
 Author: FMCG RFP Automation Team
 """
 
 import os
+import time
 import logging
-from typing import TypedDict, Dict, Any, List
+from typing import TypedDict, Dict, Any, List, Optional
 from dotenv import load_dotenv
 
-# Load environment variables first
 load_dotenv()
 
-from langgraph.graph import StateGraph, END
-
-from .intake_agent import RFPIntakeAgent
-from .sku_matching_agent import SKUMatchingAgent
-from .pricing_agent import PricingAgent
-from .proposal_agent import ProposalAgent
-from .sales_insight_agent import SalesInsightsAgent
-from utils.embeddings import create_embeddings_manager
-from utils.pdf_parser import parse_rfp_pdf
+from utils.compliance_checker import validate_order_compliance
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -35,202 +27,120 @@ class RFPState(TypedDict, total=False):
     intake_result: Dict[str, Any]
     sku_matches: Dict[str, Any]
     pricing: Dict[str, Any]
+    compliance: Dict[str, Any]
     proposal: str
     insights: Dict[str, Any]
     status: str
     errors: List[str]
+    timing: Dict[str, float]
 
 
-# Lazy initialization of agents
-_intake_agent = None
-_sku_agent = None
-_pricing_agent = None
-_proposal_agent = None
-_insights_agent = None
+def run_sequential_pipeline(raw_text: str, rfp_id: Optional[str] = None, use_mock: bool = False) -> Dict[str, Any]:
+    """
+    Robust sequential orchestrator that runs all FMCG agents with timing,
+    compliance verification, and graceful error boundaries.
+    """
+    start_time = time.time()
+    timing: Dict[str, float] = {}
+    errors: List[str] = []
+    
+    rfp_id = rfp_id or f"ORDER_{int(time.time())}"
 
-_embeddings_manager = None  # lazy init in first node
-
-
-def _get_intake_agent():
-    global _intake_agent
-    if _intake_agent is None:
-        _intake_agent = RFPIntakeAgent()
-    return _intake_agent
-
-
-def _get_sku_agent():
-    global _sku_agent
-    if _sku_agent is None:
-        _sku_agent = SKUMatchingAgent()
-    return _sku_agent
-
-
-def _get_pricing_agent():
-    global _pricing_agent
-    if _pricing_agent is None:
-        _pricing_agent = PricingAgent()
-    return _pricing_agent
-
-
-def _get_proposal_agent():
-    global _proposal_agent
-    if _proposal_agent is None:
-        _proposal_agent = ProposalAgent()
-    return _proposal_agent
-
-
-def _get_insights_agent():
-    global _insights_agent
-    if _insights_agent is None:
-        _insights_agent = SalesInsightsAgent()
-    return _insights_agent
-
-
-def _get_embeddings_manager() -> Any:
-    global _embeddings_manager
-    if _embeddings_manager is None:
-        logger.info("Initializing SKU embeddings manager...")
-        _embeddings_manager = create_embeddings_manager("data/sku_catalog.csv")
-    return _embeddings_manager
-
-
-def intake_node(state: RFPState) -> RFPState:
-    logger.info("[Node:intake] Starting intake processing")
-    errors = state.get("errors", [])
-
-    try:
-        result = _get_intake_agent().process({"raw_text": state["raw_data"]["raw_text"]})
-        state["intake_result"] = result
-        state["rfp_id"] = result.get("rfp_id", state.get("rfp_id", ""))
-        state["status"] = "INTAKE_COMPLETE"
-    except Exception as e:
-        msg = f"Intake error: {e}"
-        logger.error(msg)
-        errors.append(msg)
-        state["status"] = "INTAKE_FAILED"
-    state["errors"] = errors
-    return state
-
-
-def sku_matching_node(state: RFPState) -> RFPState:
-    logger.info("[Node:sku_matching] Starting SKU matching")
-    errors = state.get("errors", [])
-
-    try:
-        intake = state.get("intake_result", {})
-        line_items = intake.get("line_items", [])
-        rfp_id = state.get("rfp_id", intake.get("rfp_id", ""))
-
-        em = _get_embeddings_manager()
-        if em is None:
-            raise RuntimeError("Embeddings manager could not be initialized")
-
-        result = _get_sku_agent().process(rfp_id, line_items, em)
-        state["sku_matches"] = result
-        state["status"] = "SKU_MATCHING_COMPLETE"
-    except Exception as e:
-        msg = f"SKU matching error: {e}"
-        logger.error(msg)
-        errors.append(msg)
-        state["status"] = "SKU_MATCHING_FAILED"
-    state["errors"] = errors
-    return state
-
-
-def pricing_node(state: RFPState) -> RFPState:
-    logger.info("[Node:pricing] Starting pricing")
-    errors = state.get("errors", [])
-
-    try:
-        rfp_id = state.get("rfp_id", "")
-        sku_matches = state.get("sku_matches", {})
-
-        # Load pricing rules from file
-        import json
-        from pathlib import Path
-
-        rules_path = Path("data/pricing_rules.json")
-        with rules_path.open("r", encoding="utf-8") as f:
-            pricing_rules = json.load(f)
-
-        em = _get_embeddings_manager()
-
-        result = _get_pricing_agent().process(
-            rfp_id=rfp_id,
-            sku_matches=sku_matches.get("sku_matches", []),
-            pricing_rules=pricing_rules,
-            client_type="regular",
-            embeddings_manager=em,
+    # 1. Select Agents
+    if use_mock:
+        from agents.mock_agents import (
+            MockIntakeAgent, MockSKUMatchingAgent, MockPricingAgent,
+            MockSalesInsightsAgent, MockBestProposalAgent
         )
-        state["pricing"] = result
-        state["status"] = "PRICING_COMPLETE"
-    except Exception as e:
-        msg = f"Pricing error: {e}"
-        logger.error(msg)
-        errors.append(msg)
-        state["status"] = "PRICING_FAILED"
-    state["errors"] = errors
-    return state
+        intake_agent = MockIntakeAgent()
+        sku_agent = MockSKUMatchingAgent()
+        pricing_agent = MockPricingAgent()
+        insights_agent = MockSalesInsightsAgent()
+        proposal_agent = MockBestProposalAgent()
+    else:
+        from agents.intake_agent import IntakeAgent
+        from agents.sku_matching_agent import SKUMatchingAgent
+        from agents.pricing_agent import PricingAgent
+        from agents.sales_insight_agent import SalesInsightsAgent
+        from agents.best_proposal_agent import BestProposalAgent
 
+        intake_agent = IntakeAgent()
+        sku_agent = SKUMatchingAgent()
+        pricing_agent = PricingAgent()
+        insights_agent = SalesInsightsAgent()
+        proposal_agent = BestProposalAgent()
 
-def proposal_node(state: RFPState) -> RFPState:
-    logger.info("[Node:proposal] Generating proposal document")
-    errors = state.get("errors", [])
-
+    # Step 1: Intake
+    t0 = time.time()
     try:
-        intake = state.get("intake_result", {})
-        sku_matches = state.get("sku_matches", {})
-        pricing = state.get("pricing", {})
-
-        proposal_md = _get_proposal_agent().process(intake, sku_matches, pricing)
-        state["proposal"] = proposal_md
-        state["status"] = "PROPOSAL_COMPLETE"
+        intake_result = intake_agent.process({"raw_text": raw_text})
     except Exception as e:
-        msg = f"Proposal error: {e}"
-        logger.error(msg)
-        errors.append(msg)
-        state["status"] = "PROPOSAL_FAILED"
-    state["errors"] = errors
-    return state
+        logger.error(f"Intake failed: {e}")
+        errors.append(f"Intake: {e}")
+        intake_result = {"line_items": [], "client_name": "Retail Client"}
+    timing["intake_seconds"] = round(time.time() - t0, 2)
 
-
-def insights_node(state: RFPState) -> RFPState:
-    logger.info("[Node:insights] Generating sales insights")
-    errors = state.get("errors", [])
-
+    # Step 2: SKU Matching
+    t0 = time.time()
     try:
-        rfp_id = state.get("rfp_id", "")
-        intake = state.get("intake_result", {})
-        sku_matches = state.get("sku_matches", {})
-        pricing = state.get("pricing", {})
-
-        insights = _get_insights_agent().process(rfp_id, intake, sku_matches, pricing)
-        state["insights"] = insights
-        state["status"] = "INSIGHTS_COMPLETE"
+        sku_matches = sku_agent.process(intake_result)
     except Exception as e:
-        msg = f"Insights error: {e}"
-        logger.error(msg)
-        errors.append(msg)
-        state["status"] = "INSIGHTS_FAILED"
-    state["errors"] = errors
-    return state
+        logger.error(f"SKU matching failed: {e}")
+        errors.append(f"SKU Matching: {e}")
+        sku_matches = {"matches": []}
+    timing["sku_matching_seconds"] = round(time.time() - t0, 2)
 
+    # Step 3: Pricing
+    t0 = time.time()
+    try:
+        pricing_result = pricing_agent.process(intake_result, sku_matches)
+    except Exception as e:
+        logger.error(f"Pricing failed: {e}")
+        errors.append(f"Pricing: {e}")
+        pricing_result = {"pricing_table": [], "summary": {}}
+    timing["pricing_seconds"] = round(time.time() - t0, 2)
 
-def create_rfp_workflow():
-    """Create and compile the LangGraph workflow."""
-    workflow = StateGraph(RFPState)
+    # Step 4: Compliance Guardrails
+    t0 = time.time()
+    compliance_result = validate_order_compliance(intake_result, pricing_result)
+    timing["compliance_seconds"] = round(time.time() - t0, 2)
 
-    workflow.add_node("intake", intake_node)
-    workflow.add_node("sku_matching", sku_matching_node)
-    workflow.add_node("pricing", pricing_node)
-    workflow.add_node("proposal", proposal_node)
-    workflow.add_node("insights", insights_node)
+    # Step 5: Sales Insights
+    t0 = time.time()
+    try:
+        insights_result = insights_agent.process(
+            rfp_text=raw_text,
+            rfp_data=intake_result,
+            pricing_data=pricing_result
+        )
+    except Exception as e:
+        logger.error(f"Insights failed: {e}")
+        errors.append(f"Insights: {e}")
+        insights_result = {"win_probability_pct": 65, "risk_level": "Medium"}
+    timing["insights_seconds"] = round(time.time() - t0, 2)
 
-    workflow.set_entry_point("intake")
-    workflow.add_edge("intake", "sku_matching")
-    workflow.add_edge("sku_matching", "pricing")
-    workflow.add_edge("pricing", "proposal")
-    workflow.add_edge("proposal", "insights")
-    workflow.add_edge("insights", END)
+    # Step 6: Proposal Generation
+    t0 = time.time()
+    try:
+        proposal_dict = proposal_agent.process(intake_result, pricing_result, insights_result)
+        proposal_content = proposal_dict.get("content", "")
+    except Exception as e:
+        logger.error(f"Proposal failed: {e}")
+        errors.append(f"Proposal: {e}")
+        proposal_content = "Quotation generated."
+    timing["proposal_seconds"] = round(time.time() - t0, 2)
 
-    return workflow.compile()
+    timing["total_pipeline_seconds"] = round(time.time() - start_time, 2)
+
+    return {
+        "rfp_id": rfp_id,
+        "rfp_data": intake_result,
+        "sku_matches": sku_matches,
+        "pricing": pricing_result,
+        "compliance": compliance_result,
+        "insights": insights_result,
+        "proposal": {"content": proposal_content},
+        "errors": errors,
+        "timing": timing,
+        "status": "COMPLETED" if not errors else "COMPLETED_WITH_WARNINGS"
+    }
